@@ -9,9 +9,23 @@
 #import <UIKit/UIKit.h>
 #import "BarDetailViewController.h"
 
-@interface FavoritesController : UITableViewController {
+@interface FavoritesController : UITableViewController <NSXMLParserDelegate> {
 	BarDetailViewController* detailViewController;
 	NSMutableArray* favorites;
+    NSMutableData* xmlData;
+    NSURLConnection* connectionInProgress;
+    
+    NSMutableString*    parseState;      // Describes which XML element is being processed.
+    NSMutableString*    barId;
+    NSMutableString*    barName;
+    NSMutableString*    address;
+    NSMutableString*    city;
+    NSMutableString*    state;
+    NSMutableString*    zip;
+    float               lat;
+    float               lon;
 }
+
+- (void) loadFavorites;
 
 @end

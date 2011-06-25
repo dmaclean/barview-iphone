@@ -153,8 +153,8 @@
 - (void) connection:(NSURLConnection *)connection didFailWithError:(NSError*) error {
 	NSLog(@"Connection error happened.");
     
-    [connection release];
-    connection = nil;
+    [self.connection release];
+    self.connection = nil;
 }
 
 /*

@@ -77,6 +77,11 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadFavorites];
+}
+
 - (NSInteger) tableView:(UITableView*) tv numberOfRowsInSection:(NSInteger) section {
 	return [favorites count];
 }
@@ -143,6 +148,153 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+
+
+- (void) loadFavorites {
+    [favorites removeAllObjects];
+    [[self tableView] reloadData];
+    
+    // Construct URL
+    NSURL* url = [NSURL URLWithString:@"http://localhost:8080/barview/favorites.xml"];
+    
+    // Construct request object
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
+    [request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
+    
+    // Clear out existing connection if one exists
+    if(connectionInProgress) {
+        [connectionInProgress cancel];
+        [connectionInProgress release];
+    }
+    
+    // Instantiate the data structure
+    [xmlData release];
+    xmlData = [[NSMutableData alloc] init];
+    
+    // Create and initiate the (non-blocking) connection
+    connectionInProgress = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+}
+
+/**
+ * Append data to the structure that holds favorites as the data comes in.
+ */
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [xmlData appendData:data];
+}
+
+/**
+ * Print out the XML result to console to show that we've received it all.
+ */
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSString* xmlCheck = [[[NSString alloc] initWithData:xmlData encoding:NSUTF8StringEncoding] autorelease];
+    NSLog(@"xml check = %@", xmlCheck);
+    
+    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
+    [parser setDelegate:self];
+    
+    // Instruct the parser to start parsing - this is a blocking call.
+    [parser parse];
+    
+    //The parser is done at this point, so release it and reload the table data.
+    [parser release];
+    [[self tableView] reloadData];
+}
+
+/**
+ * In the event of an error with fetching the favorites we want to release and null out the
+ * connection and xml data structure.
+ *
+ * We are also going to show the user a message letting them know the fetch failed.
+ */
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [connectionInProgress release];
+    connectionInProgress = nil;
+    
+    [xmlData release];
+    xmlData = nil;
+    
+    NSString* errorString = [NSString stringWithFormat:@"Fetch failed %@", [error localizedDescription]];
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:errorString delegate:nil cancelButtonTitle:@"OK" destructiveButtonTitle:nil otherButtonTitles:nil];
+    [actionSheet showInView:[self tableView]];
+    [actionSheet autorelease];
+}
+
+
+
+/***********************
+ * XML PARSING METHODS
+ **********************/
+
+/**
+ * Alerts us that the XML parser has found a new element that it will
+ * begin parsing.  In this method we will change the state so we know
+ * which string to append data to until the end tag is reached.
+ */
+- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
+    
+    parseState = [[NSMutableString alloc] initWithString:elementName];
+    if ([elementName isEqualToString:@"name"]) {
+        barName = [[NSMutableString alloc] init];
+    }
+    else if([elementName isEqualToString:@"address"]) {
+        address = [[NSMutableString alloc] init];
+    }
+    else if([elementName isEqualToString:@"id"]) {
+        barId = [[NSMutableString alloc] init];
+    }
+}
+
+/**
+ * Keep adding characters within a given set of tags as long as there are more characters.
+ */
+- (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if ([parseState isEqualToString:@"name"]) {
+        [barName appendString:string];
+    }
+    else if([parseState isEqualToString:@"address"]) {
+        [address appendString:string];
+    }
+    else if([parseState isEqualToString:@"id"]) {
+        [barId appendString:string];
+    }
+}
+
+/**
+ * We've found an end tag.  However, we only want to add an entry to the table when the whole
+ * XML entity for a single bar has been parsed.  We know this occurs when we process a 
+ * </com.barview.rest.Favorite> tag.
+ */
+- (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
+    
+    NSLog(@"Processing end tag %@", elementName);
+    if ([elementName isEqualToString:@"com.barview.rest.Favorite"]) {
+        Bar* b = [[Bar alloc] init];
+        [b setBarId:[[NSString alloc] initWithString:barId]];
+        [b setName:[[NSString alloc] initWithString:barName]];
+        [b setAddr:[[NSString alloc] initWithString:address]];
+        [b setCity:@"Medfield"];
+        [b setState:@"MA"];
+        [b setZip:@"02052"];
+        
+        [favorites addObject:b];
+        [b release];
+        
+        [barName release];
+        barName = nil;
+        
+        [address release];
+        address = nil;
+        
+        [barId release];
+        barId = nil;
+    }
+}
+
+- (void) parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+    NSLog(@"ERROR PARSING XML: %@", [parseError localizedDescription]);
 }
 
 

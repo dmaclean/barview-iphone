@@ -10,6 +10,7 @@
 
 
 @interface Bar : NSObject {
+    NSString* barId;
 	NSString* name;
 	NSString* addr;
 	NSString* city;
@@ -17,6 +18,7 @@
 	NSString* zip;
 }
 
+@property (nonatomic, assign) NSString* barId;
 @property (nonatomic, assign) NSString* name;
 @property (nonatomic, assign) NSString* addr;
 @property (nonatomic, assign) NSString* city;
