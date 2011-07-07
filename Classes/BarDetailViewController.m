@@ -113,7 +113,7 @@
     // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
     // treating it like a string causes a newline to show up and fucks up the URL).
     NSMutableString* urlString = [[NSMutableString alloc] 
-                                  initWithFormat:@"http://localhost:8080/barview/bar-images/%d.xml", [[bar barId] integerValue]];
+                                  initWithFormat:@"http://localhost:8888/barview/index.php/rest/barimage/%d", [[bar barId] integerValue]];
 
     NSLog(@"Trying URL %@ for bar id %@abc", urlString, [bar barId]);
     NSURL* url = [[NSURL alloc] initWithString:urlString];
@@ -219,7 +219,7 @@
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
     NSLog(@"Processing end tag %@", elementName);
-    if ([elementName isEqualToString:@"com.barview.rest.BarImage"]) {
+    if ([elementName isEqualToString:@"barimage"]) {
         NSData* b64DecData = [Base64 decodeBase64WithString:imageString];
         UIImage* img = [[UIImage alloc] initWithData:b64DecData];
         barImage.image = img;
