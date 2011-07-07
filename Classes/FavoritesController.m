@@ -21,7 +21,7 @@
 		[tbi setTitle:@"Favorite Bars"];
 		
 		favorites = [[NSMutableArray alloc] init];
-		for (int i=0; i<5; i++) {
+		/*for (int i=0; i<5; i++) {
 			Bar* b = [[Bar alloc] init];
 			[b setName:@"Test %d"];
 			[b setAddr:@"1 Main St"];
@@ -31,7 +31,8 @@
 			
 			[favorites addObject:b];
 			[b release];
-		}
+		}*/
+        [self loadFavorites];
 		
 		// Set the nav bar with the edit button
 		[[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
@@ -120,7 +121,41 @@
 	
 	// Are we deleting?
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
-		// Remove the row from the data source
+        Bar* b = [favorites objectAtIndex:[indexPath row]];
+        NSString* bar_id = [b barId];
+        [b release];
+        
+		//////////////////////////////////////////////////////////////////////
+        // Send a message to the REST server that we're deleting a favorite.
+        //////////////////////////////////////////////////////////////////////
+        // Construct URL
+        NSMutableString* urlString = [[NSMutableString alloc] 
+                                      initWithFormat:@"http://localhost:8888/barview/index.php/rest/favorite/%@", bar_id];
+        NSURL* url = [NSURL URLWithString:urlString];
+        
+        // Construct request object
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
+        [request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
+        [request setHTTPMethod:@"DELETE"];
+        
+        // Clear out existing connection if one exists
+        if(connectionInProgress) {
+            [connectionInProgress cancel];
+            [connectionInProgress release];
+        }
+        
+        // Instantiate the data structure
+        [xmlData release];
+        xmlData = [[NSMutableData alloc] init];
+        
+        // Create and initiate the (non-blocking) connection
+        connectionInProgress = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+        
+        
+        
+        
+        
+        // Remove the row from the data source
 		[favorites removeObjectAtIndex:[indexPath row]];
 		
 		// Remove the row from the table view
@@ -157,7 +192,8 @@
     [[self tableView] reloadData];
     
     // Construct URL
-    NSURL* url = [NSURL URLWithString:@"http://localhost:8080/barview/favorites.xml"];
+    //NSURL* url = [NSURL URLWithString:@"http://localhost:8080/barview/favorites.xml"];
+    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/rest/favorites"];
     
     // Construct request object
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
@@ -242,7 +278,7 @@
     else if([elementName isEqualToString:@"address"]) {
         address = [[NSMutableString alloc] init];
     }
-    else if([elementName isEqualToString:@"id"]) {
+    else if([elementName isEqualToString:@"bar_id"]) {
         barId = [[NSMutableString alloc] init];
     }
 }
@@ -257,7 +293,7 @@
     else if([parseState isEqualToString:@"address"]) {
         [address appendString:string];
     }
-    else if([parseState isEqualToString:@"id"]) {
+    else if([parseState isEqualToString:@"bar_id"]) {
         [barId appendString:string];
     }
 }
@@ -270,7 +306,7 @@
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
     NSLog(@"Processing end tag %@", elementName);
-    if ([elementName isEqualToString:@"com.barview.rest.Favorite"]) {
+    if ([elementName isEqualToString:@"favorite"]) {
         Bar* b = [[Bar alloc] init];
         [b setBarId:[[NSString alloc] initWithString:barId]];
         [b setName:[[NSString alloc] initWithString:barName]];
