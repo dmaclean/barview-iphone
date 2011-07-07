@@ -7,9 +7,7 @@
 //
 
 #import "HypnotimeAppDelegate.h"
-#import "HypnosisViewController.h"
 #import "BarMapLookup.h"
-#import "CurrentTimeViewController.h"
 #import "CurrentLocation.h"
 #import "FavoritesController.h"
 #import "MapPoint.h"
