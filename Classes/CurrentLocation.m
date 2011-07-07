@@ -81,10 +81,56 @@
 	[mv setRegion:region animated:YES];
 }
 
+/**
+ * Configure an annotation that will appear within the view.  We want each annotation to
+ * have the current image from its respective bar.  Might revisit this approach later depending
+ * on how painful it is on the database.
+ */
+- (MKAnnotationView*) mapView:(MKMapView *)mv viewForAnnotation:(id<MKAnnotation>)annotation {
+    NSLog(@"Inside of viewForAnnotation");
+    
+    // We don't want to go through all this nonsense if the annotation is for the
+    // user's location (blue dot).  The reason this worked in BarMapLookup is because
+    // this method wasn't implemented.
+    if ([annotation isMemberOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    static NSString *AnnotationViewID = @"annotationViewID";
+    
+    MapPoint* myAnnotation = (MapPoint*) annotation;
+    
+    MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    if (annotationView == nil)
+        annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:myAnnotation reuseIdentifier:AnnotationViewID] autorelease];
+    
+    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.animatesDrop = YES;
+    annotationView.canShowCallout = YES;
+    
+    UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:self
+                    action:@selector(showDetails:)
+          forControlEvents:UIControlEventTouchUpInside];
+    annotationView.rightCalloutAccessoryView = rightButton;
+    
+    //annotationView.annotation = myAnnotation;
+    //UIImage* img = [[UIImage alloc] initWithContentsOfFile:@"/Users/dmaclean/Desktop/boston.barstoolsports.jpeg"];
+    //[annotationView setImage:img];
+    
+    // Create a region with the current coordinate and set the MapView to zoom into it.
+    /*id <MKAnnotation> mp = [annotationView annotation];
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
+	[mv setRegion:region animated:YES];*/
+    
+    return annotationView;
+}
+
 - (void)	locationManager:(CLLocationManager *)manager 
 	 didUpdateToLocation:(CLLocation *)newLocation	
 			fromLocation:(CLLocation *)oldLocation {
-	NSLog(@"%@", newLocation);
+
+	NSLog(@"didUpdateToLocation - %@", newLocation);
 	
 	// How many seconds ago was this new location created?
 	NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];

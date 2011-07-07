@@ -10,9 +10,13 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+#import "MapPointView.h"
+
 @interface CurrentLocation : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
 	CLLocationManager *locationManager;
 	
+    //NSMutableArray* currentLocation;
+    
 	IBOutlet MKMapView *mapView;
 }
 
