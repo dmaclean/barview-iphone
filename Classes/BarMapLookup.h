@@ -10,8 +10,8 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "Bar.h"
 #import "MapPoint.h"
-#import "NearbyBarFetcher.h"
 
 #define GOOGLE_OUPUT_FORMAT_CSV		@"csv"
 #define GOOGLE_OUPUT_FORMAT_XML		@"xml"
