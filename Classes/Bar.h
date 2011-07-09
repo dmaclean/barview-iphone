@@ -16,6 +16,9 @@
 	NSString* city;
 	NSString* state;
 	NSString* zip;
+    
+    NSString* latitude;
+    NSString* longitude;
 }
 
 @property (nonatomic, assign) NSString* barId;
@@ -24,5 +27,7 @@
 @property (nonatomic, assign) NSString* city;
 @property (nonatomic, assign) NSString* state;
 @property (nonatomic, assign) NSString* zip;
+@property (nonatomic, assign) NSString* latitude;
+@property (nonatomic, assign) NSString* longitude;
 
 @end

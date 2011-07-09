@@ -10,7 +10,7 @@
 
 
 @implementation Bar
-@synthesize barId, name, addr, city, state, zip;
+@synthesize barId, name, addr, city, state, zip, latitude, longitude;
 
 - (id) init {
 	[super init];
