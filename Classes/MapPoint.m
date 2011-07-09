@@ -10,7 +10,7 @@
 
 
 @implementation MapPoint
-@synthesize coordinate, title;
+@synthesize coordinate, title, subtitle;
 
 - (id) initWithCoordinate:(CLLocationCoordinate2D)c 
 					title:(NSString *)t {
@@ -18,6 +18,14 @@
 	coordinate = c;
 	[self setTitle:t];
 	return self;
+}
+
+- (NSString*) title {
+    return title;
+}
+
+- (NSString*) subtitle {
+    return subtitle;
 }
 
 - (void) dealloc {
