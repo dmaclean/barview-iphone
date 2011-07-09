@@ -15,10 +15,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		531898921393CD6900C7B619 /* FavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531898911393CD6900C7B619 /* FavoritesController.m */; };
 		531898991393CDBA00C7B619 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 531898981393CDBA00C7B619 /* Bar.m */; };
-		53269DBA138A957300FD03AF /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269DB9138A957300FD03AF /* HypnosisView.m */; };
-		53269DC9138A96A600FD03AF /* CurrentTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269DC7138A96A600FD03AF /* CurrentTimeViewController.m */; };
-		53269DCA138A96A600FD03AF /* CurrentTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53269DC8138A96A600FD03AF /* CurrentTimeViewController.xib */; };
-		53269DCF138A96CC00FD03AF /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269DCE138A96CC00FD03AF /* HypnosisViewController.m */; };
 		53269E0A138C262900FD03AF /* CurrentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269E08138C262900FD03AF /* CurrentLocation.m */; };
 		53269E0B138C262900FD03AF /* CurrentLocation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53269E09138C262900FD03AF /* CurrentLocation.xib */; };
 		53269E67138C674B00FD03AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53269E66138C674B00FD03AF /* MapKit.framework */; };
@@ -29,6 +25,7 @@
 		536EC4311394F6AF00631D6D /* BarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536EC42F1394F6AF00631D6D /* BarDetailViewController.m */; };
 		536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EC4301394F6AF00631D6D /* BarDetailViewController.xib */; };
 		53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4FCF113B42A7F00DE5B66 /* Base64.m */; };
+		53F86EB313B59124006D196A /* MapPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F86EB213B59124006D196A /* MapPointView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +42,6 @@
 		531898911393CD6900C7B619 /* FavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesController.m; sourceTree = "<group>"; };
 		531898971393CDBA00C7B619 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
 		531898981393CDBA00C7B619 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
-		53269DB8138A957300FD03AF /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HypnosisView.h; path = ../Hypnosister/HypnosisView.h; sourceTree = SOURCE_ROOT; };
-		53269DB9138A957300FD03AF /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HypnosisView.m; path = ../Hypnosister/HypnosisView.m; sourceTree = SOURCE_ROOT; };
-		53269DC6138A96A600FD03AF /* CurrentTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTimeViewController.h; sourceTree = "<group>"; };
-		53269DC7138A96A600FD03AF /* CurrentTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTimeViewController.m; sourceTree = "<group>"; };
-		53269DC8138A96A600FD03AF /* CurrentTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentTimeViewController.xib; sourceTree = "<group>"; };
-		53269DCD138A96CC00FD03AF /* HypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisViewController.h; sourceTree = "<group>"; };
-		53269DCE138A96CC00FD03AF /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisViewController.m; sourceTree = "<group>"; };
 		53269E07138C262900FD03AF /* CurrentLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentLocation.h; sourceTree = "<group>"; };
 		53269E08138C262900FD03AF /* CurrentLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentLocation.m; sourceTree = "<group>"; };
 		53269E09138C262900FD03AF /* CurrentLocation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentLocation.xib; sourceTree = "<group>"; };
@@ -67,6 +57,8 @@
 		536EC4301394F6AF00631D6D /* BarDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarDetailViewController.xib; sourceTree = "<group>"; };
 		53A4FCF013B42A7F00DE5B66 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		53A4FCF113B42A7F00DE5B66 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		53F86EB113B59124006D196A /* MapPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPointView.h; sourceTree = "<group>"; };
+		53F86EB213B59124006D196A /* MapPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPointView.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Barview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Barview-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,15 +83,8 @@
 			children = (
 				53269EA4138C6D9900FD03AF /* MapPoint.h */,
 				53269EA5138C6D9900FD03AF /* MapPoint.m */,
-				53269DB8138A957300FD03AF /* HypnosisView.h */,
-				53269DB9138A957300FD03AF /* HypnosisView.m */,
 				1D3623240D0F684500981E51 /* HypnotimeAppDelegate.h */,
 				1D3623250D0F684500981E51 /* HypnotimeAppDelegate.m */,
-				53269DC6138A96A600FD03AF /* CurrentTimeViewController.h */,
-				53269DC7138A96A600FD03AF /* CurrentTimeViewController.m */,
-				53269DC8138A96A600FD03AF /* CurrentTimeViewController.xib */,
-				53269DCD138A96CC00FD03AF /* HypnosisViewController.h */,
-				53269DCE138A96CC00FD03AF /* HypnosisViewController.m */,
 				53269E07138C262900FD03AF /* CurrentLocation.h */,
 				53269E08138C262900FD03AF /* CurrentLocation.m */,
 				53269E09138C262900FD03AF /* CurrentLocation.xib */,
@@ -115,6 +100,8 @@
 				5352627A1396E56200AED924 /* BarMapLookup.xib */,
 				53A4FCF013B42A7F00DE5B66 /* Base64.h */,
 				53A4FCF113B42A7F00DE5B66 /* Base64.m */,
+				53F86EB113B59124006D196A /* MapPointView.h */,
+				53F86EB213B59124006D196A /* MapPointView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -219,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				53269DCA138A96A600FD03AF /* CurrentTimeViewController.xib in Resources */,
 				53269E0B138C262900FD03AF /* CurrentLocation.xib in Resources */,
 				536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */,
 				5352627C1396E56200AED924 /* BarMapLookup.xib in Resources */,
@@ -235,9 +221,6 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* HypnotimeAppDelegate.m in Sources */,
-				53269DBA138A957300FD03AF /* HypnosisView.m in Sources */,
-				53269DC9138A96A600FD03AF /* CurrentTimeViewController.m in Sources */,
-				53269DCF138A96CC00FD03AF /* HypnosisViewController.m in Sources */,
 				53269E0A138C262900FD03AF /* CurrentLocation.m in Sources */,
 				53269EA6138C6D9900FD03AF /* MapPoint.m in Sources */,
 				531898921393CD6900C7B619 /* FavoritesController.m in Sources */,
@@ -245,6 +228,7 @@
 				536EC4311394F6AF00631D6D /* BarDetailViewController.m in Sources */,
 				5352627B1396E56200AED924 /* BarMapLookup.m in Sources */,
 				53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */,
+				53F86EB313B59124006D196A /* MapPointView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
