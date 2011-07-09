@@ -10,14 +10,35 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+#import "Bar.h"
 #import "MapPointView.h"
 
-@interface CurrentLocation : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate> {
+@interface CurrentLocation : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, NSXMLParserDelegate> {
 	CLLocationManager *locationManager;
 	
-    //NSMutableArray* currentLocation;
+    // Data for the Nearby Bars call-out.
+    NSURLConnection* nearbyBarConnection;
+    
+    NSMutableData* nearbyBarData;
+    
+    NSMutableString*    parseState;      // Describes which XML element is being processed.
+    NSMutableString*    barId;
+    NSMutableString*    barName;
+    NSMutableString*    addr;
+    NSMutableString*    city;
+    NSMutableString*    state;
+    NSMutableString*    zip;
+    NSMutableString*    latStr;
+    NSMutableString*    lngStr;
+    
+    NSMutableArray*     bars;
     
 	IBOutlet MKMapView *mapView;
 }
+
+@property (nonatomic, retain) NSURLConnection* nearbyBarConnection;
+@property (nonatomic, retain) NSMutableData* nearbyBarData;
+
+- (void) fetchNearbyBars:(NSString *)latitude withLongitude:(NSString *)longitude;
 
 @end
