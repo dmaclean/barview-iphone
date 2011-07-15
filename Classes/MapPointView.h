@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+
+#import "MapPoint.h"
 
 
-@interface MapPointView : NSObject {
-    
+@interface MapPointView : MKPinAnnotationView {
+    NSMutableString* barId;
+    NSString* barName;
 }
+
+@property (nonatomic, retain) NSMutableString* barId;
+@property (nonatomic, retain) NSString* barName;
 
 @end

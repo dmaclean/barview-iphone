@@ -31,11 +31,21 @@
 	FavoritesController* faveController = [[FavoritesController alloc] init];
 	UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:faveController];
 	[[navController tabBarItem] setTitle:@"Favorite Bars"];
+    
+    // Set up the Navigation controller for Map Lookup
+    BarMapLookup* lookupController = [[BarMapLookup alloc] init];
+    UINavigationController* lookupNavController = [[UINavigationController alloc] initWithRootViewController:lookupController];
+    [[lookupNavController tabBarItem] setTitle:@"Bar Lookup"];
+    
+    // Set up the Navigation controller for Current Location
+    CurrentLocation* currLocController = [[CurrentLocation alloc] init];
+    UINavigationController* currLocNavController = [[UINavigationController alloc] initWithRootViewController:currLocController];
+    [[currLocNavController tabBarItem] setTitle:@"Bar Lookup"];
 	
 	// Create three view controllers
-	UIViewController *vc1 = [[BarMapLookup alloc] init];
+	UIViewController *vc1 = lookupNavController;//[[BarMapLookup alloc] init];
 	UIViewController *vc2 = navController;
-	UIViewController *vc3 = [[CurrentLocation alloc] init];
+	UIViewController *vc3 = currLocNavController;//[[CurrentLocation alloc] init];
 	
 	// Make an array containing the two view controllers
 	NSArray *viewControllers = [NSArray arrayWithObjects:vc1, vc2, vc3, nil];
@@ -43,6 +53,10 @@
 	[vc1 release];
 	[vc2 release];
 	[vc3 release];
+    
+    [faveController release];
+    [currLocController release];
+    [lookupController release];
 	
 	// Attach them to the tab bar controller
 	[tabBarController setViewControllers:viewControllers];

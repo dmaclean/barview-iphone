@@ -11,7 +11,7 @@
 
 @implementation BarMapLookup
 
-@synthesize data, nearbyBarData, nearbyBarConnection, lookupConnection;
+@synthesize data, nearbyBarData, nearbyBarConnection, lookupConnection, barId, barIdForAnnotation;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -21,7 +21,7 @@
 		[[self tabBarItem] setTitle:@"Search Bars"];
         
         //annotations = [[NSMutableArray alloc] init];
-		
+        
 		/*
 		 * Set up the location manager
 		 */
@@ -64,12 +64,15 @@
 
 - (void) viewDidLoad {
 	[super viewDidLoad];
+    
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];
 	
 	// Put data retrieved into data structure
 	NSMutableData* d = [[NSMutableData alloc] init];
 	self.data = d;
 	
 	[mapView setShowsUserLocation:YES];
+    [mapView setZoomEnabled:YES];
 	[locationManager startUpdatingLocation];
 }
 
@@ -122,7 +125,8 @@
  * The coordinates are collected in the callback function connectionDidFinishLoading.
  */
 - (void) getMapCoordinates:(NSString*) address {
-	NSString* geocodingURL = @"http://maps.google.com/maps/geo?q=%@&output=%@";
+//	NSString* geocodingURL = @"http://maps.google.com/maps/geo?q=%@&output=%@";
+    NSString* geocodingURL = @"http://localhost:8888/barview/index.php/google";
 	
 	NSString* finalURL = [NSString stringWithFormat:geocodingURL, address, GOOGLE_OUPUT_FORMAT_CSV];
 	finalURL = [finalURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -260,8 +264,12 @@
             CLLocationCoordinate2D loc;
             loc.latitude = [[b latitude] floatValue];
             loc.longitude = [[b longitude] floatValue];
+            
             MapPoint *mp = [[MapPoint alloc] initWithCoordinate:loc title:[b name]];
             [mp setSubtitle:[b addr]];
+            NSMutableString* tempBarId = [[NSMutableString alloc] initWithString:[b barId]];
+            [mp setBarId:tempBarId];
+            [tempBarId release];
             
             [mapView addAnnotation:mp];
             [mp release];
@@ -272,11 +280,61 @@
 
 }
 
-- (MKAnnotationView*) mapView:(MKMapView *)mv viewForAnnotation:(id<MKAnnotation>)annotation {
-    NSLog(@"IN HERE!!!");
-    NSLog(@"Number of annotations %d", [[mv annotations] count]);
+/**
+ * Handle the right-button click on a map annotation and push the view for
+ * the bar image onto the NavigationController stack.
+ */
+- (void)showDetails:(id)sender {
+    NSLog(@"In showDetails");
     
-    return nil;
+    if(!detailViewController)
+        detailViewController = [[MapImageDetailController alloc] init];
+    
+    // the detail view does not want a toolbar so hide it
+    //[self.navigationController setToolbarHidden:YES animated:NO];
+    
+    [detailViewController setBarId:[self barIdForAnnotation]];
+    [detailViewController setBarName:barNameForAnnotation];
+    
+    [[self navigationController] pushViewController:detailViewController animated:YES];
+}
+
+- (MKAnnotationView*) mapView:(MKMapView *)mv viewForAnnotation:(id<MKAnnotation>)annotation {
+    NSLog(@"Inside of viewForAnnotation");
+    
+    // We don't want to go through all this nonsense if the annotation is for the
+    // user's location (blue dot).  The reason this worked in BarMapLookup is because
+    // this method wasn't implemented.
+    if ([annotation isMemberOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    
+    static NSString *AnnotationViewID = @"annotationViewID";
+    
+    MapPoint* myAnnotation = (MapPoint*) annotation;
+    
+    //MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    MapPointView *annotationView = (MapPointView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    if (annotationView == nil)
+        annotationView = [[[MapPointView alloc] initWithAnnotation:myAnnotation reuseIdentifier:AnnotationViewID] autorelease];
+    
+    annotationView.pinColor = MKPinAnnotationColorPurple;
+    annotationView.animatesDrop = YES;
+    annotationView.canShowCallout = YES;
+    
+    UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [rightButton addTarget:self
+                    action:@selector(showDetails:)
+          forControlEvents:UIControlEventTouchUpInside];
+    annotationView.rightCalloutAccessoryView = rightButton;
+    
+    return annotationView;
+}
+
+- (void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    NSLog(@"In didSelectAnnotationView for bar %@ with name %@", [(MapPointView*) view barId], [(MapPointView*) view barName]);
+    barIdForAnnotation = [(MapPointView*) view barId];
+    barNameForAnnotation = [(MapPointView*) view barName];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField*) tf {
@@ -285,27 +343,6 @@
 	[tf resignFirstResponder];
 	return YES;
 }
-
-/*-(NSMutableArray*) getSurroundingBars:(NearbyBarFetcher *)fetcher withLatitude:(NSString *)latitude withLongitude:(NSString *)longitude {
-    NSLog(@"Inside of getSurroundingBars using lat %@ and lng %@", latitude, longitude);
-    
-    NSMutableArray* currBars = [fetcher fetchNearbyBars:latitude withLongitude:longitude];
-    
-    NSMutableArray* barPoints = [[[NSMutableArray alloc] init] autorelease];
-    for (int i=0; i<[currBars count]; i++) {
-        Bar* b = [currBars objectAtIndex:i];
-        
-        CLLocationCoordinate2D loc;
-        loc.latitude = [latitude floatValue];
-        loc.longitude = [longitude floatValue];
-        MapPoint *mp = [[MapPoint alloc] initWithCoordinate:loc title:[b name]];
-        [mp setSubtitle:[b addr]];
-        
-        [barPoints addObject:mp];
-    }
-    
-    return barPoints;
-}*/
 
 -(void) fetchNearbyBars:(NSString *)latitude withLongitude:(NSString *)longitude {
     NSLog(@"Inside fetchNearbyBars");
@@ -447,7 +484,7 @@
 	
 	[data release];
     [nearbyBarData release];
-	
+    
     [super dealloc];
 }
 

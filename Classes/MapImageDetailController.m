@@ -1,110 +1,95 @@
 //
-//  BarDetailViewController.m
-//  Hypnotime
+//  MapImageDetailController.m
+//  Barview
 //
-//  Created by Dan MacLean on 5/31/11.
+//  Created by Dan MacLean on 7/13/11.
 //  Copyright 2011 UMass Dartmouth. All rights reserved.
 //
 
-#import "BarDetailViewController.h"
+#import "MapImageDetailController.h"
 
 
-@implementation BarDetailViewController
-@synthesize bar;
+@implementation MapImageDetailController
 
+@synthesize barId, barName;
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        NSLog(@"In INIT");
+    }
+    return self;
+}*/
+
+- (void)dealloc
+{
+    [super dealloc];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-	[[self view] setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    
+    // Do any additional setup after loading the view from its nib.
+    NSLog(@"in viewDidLoad");
+    
+    [[self view] setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	[nameField setText:[bar name]];
-	[addrField setText:[bar addr]];
-	[cityField setText:[bar city]];
-	[stateField setText:[bar state]];
-	[zipField setText:[bar zip]];
-	
 	// Change the navigation item to display the name of possession.
-	[[self navigationItem] setTitle:[bar name]];
-}
-
-- (void) viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-	
-	// Clear first responder
-	[nameField resignFirstResponder];
-	[addrField resignFirstResponder];
-	[cityField resignFirstResponder];
-	[stateField resignFirstResponder];
-	[zipField resignFirstResponder];
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    NSLog(@"BarDetailViewController - viewDidAppear");
+    
+    NSMutableString* title = [[NSMutableString alloc] initWithFormat:@"%@", [self barName]];
+	[[self navigationItem] setTitle:title];
+    [title release];
     
     barImage.image = nil;
+    
+    [[self navigationController] setNavigationBarHidden:NO animated:NO];
     
     [self fetchBarImage];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-	
-	[nameField release];
-	nameField = nil;
-	
-	[nameField release];
-	nameField = nil;
-	
-	[addrField release];
-	addrField = nil;
-	
-	[cityField release];
-	cityField = nil;
-	
-	[stateField release];
-	stateField = nil;
-	
-	[zipField release];
-	zipField = nil;
-    
-    [barImage release];
-    barImage = nil;
-}
-
-
-- (void)dealloc {
-	[nameField release];
-	[addrField release];
-	[cityField release];
-	[stateField release];
-	[zipField release];
-    [barImage release];
-	
-    [super dealloc];
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+     
+    [barImage resignFirstResponder];
 }
 
 - (void) fetchBarImage {
     // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
     // treating it like a string causes a newline to show up and fucks up the URL).
     NSMutableString* urlString = [[NSMutableString alloc] 
-                                  initWithFormat:@"http://localhost:8888/barview/index.php/rest/barimage/%d", [[bar barId] integerValue]];
-
-    NSLog(@"Trying URL %@ for bar id %@", urlString, [bar barId]);
+                                  initWithFormat:@"http://localhost:8888/barview/index.php/rest/barimage/%d", [[self barId] integerValue]];
+    
+    NSLog(@"Trying URL %@ for bar id %@abc", urlString, [self barId]);
     NSURL* url = [[NSURL alloc] initWithString:urlString];
     
     [urlString release];
@@ -211,6 +196,8 @@
     if ([elementName isEqualToString:@"barimage"]) {
         NSData* b64DecData = [Base64 decodeBase64WithString:imageString];
         UIImage* img = [[UIImage alloc] initWithData:b64DecData];
+        //barImage.image = img;
+        //[barImage initWithImage:img];
         
         [barImage setImage:img];
         
@@ -219,11 +206,14 @@
         [imageString release];
         imageString = nil;
     }
+    
+    
+    
+    //[barImage setImage:nil];
 }
 
 - (void) parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
     NSLog(@"ERROR PARSING XML: %@", [parseError localizedDescription]);
 }
-
 
 @end

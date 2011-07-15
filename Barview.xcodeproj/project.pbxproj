@@ -20,10 +20,23 @@
 		53269E67138C674B00FD03AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53269E66138C674B00FD03AF /* MapKit.framework */; };
 		53269E69138C675400FD03AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53269E68138C675400FD03AF /* CoreLocation.framework */; };
 		53269EA6138C6D9900FD03AF /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269EA5138C6D9900FD03AF /* MapPoint.m */; };
+		5336EE7F13CD2BA500FF72F8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7413CD2BA500FF72F8 /* Default.png */; };
+		5336EE8013CD2BA500FF72F8 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7513CD2BA500FF72F8 /* flag.png */; };
+		5336EE8113CD2BA500FF72F8 /* GoldenGate.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7613CD2BA500FF72F8 /* GoldenGate.png */; };
+		5336EE8213CD2BA500FF72F8 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7713CD2BA500FF72F8 /* Icon-72.png */; };
+		5336EE8313CD2BA500FF72F8 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7813CD2BA500FF72F8 /* Icon-Small-50.png */; };
+		5336EE8413CD2BA500FF72F8 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7913CD2BA500FF72F8 /* Icon-Small.png */; };
+		5336EE8513CD2BA500FF72F8 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7A13CD2BA500FF72F8 /* Icon-Small@2x.png */; };
+		5336EE8613CD2BA500FF72F8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7B13CD2BA500FF72F8 /* Icon.png */; };
+		5336EE8713CD2BA500FF72F8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7C13CD2BA500FF72F8 /* Icon@2x.png */; };
+		5336EE8813CD2BA500FF72F8 /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7D13CD2BA500FF72F8 /* Location.png */; };
+		5336EE8913CD2BA500FF72F8 /* SFIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5336EE7E13CD2BA500FF72F8 /* SFIcon.png */; };
 		5352627B1396E56200AED924 /* BarMapLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = 535262791396E56200AED924 /* BarMapLookup.m */; };
 		5352627C1396E56200AED924 /* BarMapLookup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5352627A1396E56200AED924 /* BarMapLookup.xib */; };
 		536EC4311394F6AF00631D6D /* BarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536EC42F1394F6AF00631D6D /* BarDetailViewController.m */; };
 		536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EC4301394F6AF00631D6D /* BarDetailViewController.xib */; };
+		539D2A9F13CE008900DD08D0 /* MapImageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */; };
+		539D2AA013CE008900DD08D0 /* MapImageDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */; };
 		53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4FCF113B42A7F00DE5B66 /* Base64.m */; };
 		53F86EB313B59124006D196A /* MapPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F86EB213B59124006D196A /* MapPointView.m */; };
 /* End PBXBuildFile section */
@@ -49,12 +62,26 @@
 		53269E68138C675400FD03AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53269EA4138C6D9900FD03AF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		53269EA5138C6D9900FD03AF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		5336EE7413CD2BA500FF72F8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5336EE7513CD2BA500FF72F8 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
+		5336EE7613CD2BA500FF72F8 /* GoldenGate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldenGate.png; sourceTree = "<group>"; };
+		5336EE7713CD2BA500FF72F8 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		5336EE7813CD2BA500FF72F8 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		5336EE7913CD2BA500FF72F8 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		5336EE7A13CD2BA500FF72F8 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		5336EE7B13CD2BA500FF72F8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		5336EE7C13CD2BA500FF72F8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		5336EE7D13CD2BA500FF72F8 /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Location.png; sourceTree = "<group>"; };
+		5336EE7E13CD2BA500FF72F8 /* SFIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SFIcon.png; sourceTree = "<group>"; };
 		535262781396E56200AED924 /* BarMapLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarMapLookup.h; sourceTree = "<group>"; };
 		535262791396E56200AED924 /* BarMapLookup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarMapLookup.m; sourceTree = "<group>"; };
 		5352627A1396E56200AED924 /* BarMapLookup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarMapLookup.xib; sourceTree = "<group>"; };
 		536EC42E1394F6AF00631D6D /* BarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDetailViewController.h; sourceTree = "<group>"; };
 		536EC42F1394F6AF00631D6D /* BarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDetailViewController.m; sourceTree = "<group>"; };
 		536EC4301394F6AF00631D6D /* BarDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarDetailViewController.xib; sourceTree = "<group>"; };
+		539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapImageDetailController.h; sourceTree = "<group>"; };
+		539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapImageDetailController.m; sourceTree = "<group>"; };
+		539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapImageDetailController.xib; sourceTree = "<group>"; };
 		53A4FCF013B42A7F00DE5B66 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		53A4FCF113B42A7F00DE5B66 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		53F86EB113B59124006D196A /* MapPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPointView.h; sourceTree = "<group>"; };
@@ -102,6 +129,9 @@
 				53A4FCF113B42A7F00DE5B66 /* Base64.m */,
 				53F86EB113B59124006D196A /* MapPointView.h */,
 				53F86EB213B59124006D196A /* MapPointView.m */,
+				539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */,
+				539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */,
+				539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -140,6 +170,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5336EE7313CD2BA500FF72F8 /* images */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Barview-Info.plist */,
 			);
@@ -154,6 +185,24 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5336EE7313CD2BA500FF72F8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5336EE7413CD2BA500FF72F8 /* Default.png */,
+				5336EE7513CD2BA500FF72F8 /* flag.png */,
+				5336EE7613CD2BA500FF72F8 /* GoldenGate.png */,
+				5336EE7713CD2BA500FF72F8 /* Icon-72.png */,
+				5336EE7813CD2BA500FF72F8 /* Icon-Small-50.png */,
+				5336EE7913CD2BA500FF72F8 /* Icon-Small.png */,
+				5336EE7A13CD2BA500FF72F8 /* Icon-Small@2x.png */,
+				5336EE7B13CD2BA500FF72F8 /* Icon.png */,
+				5336EE7C13CD2BA500FF72F8 /* Icon@2x.png */,
+				5336EE7D13CD2BA500FF72F8 /* Location.png */,
+				5336EE7E13CD2BA500FF72F8 /* SFIcon.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +258,18 @@
 				53269E0B138C262900FD03AF /* CurrentLocation.xib in Resources */,
 				536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */,
 				5352627C1396E56200AED924 /* BarMapLookup.xib in Resources */,
+				5336EE7F13CD2BA500FF72F8 /* Default.png in Resources */,
+				5336EE8013CD2BA500FF72F8 /* flag.png in Resources */,
+				5336EE8113CD2BA500FF72F8 /* GoldenGate.png in Resources */,
+				5336EE8213CD2BA500FF72F8 /* Icon-72.png in Resources */,
+				5336EE8313CD2BA500FF72F8 /* Icon-Small-50.png in Resources */,
+				5336EE8413CD2BA500FF72F8 /* Icon-Small.png in Resources */,
+				5336EE8513CD2BA500FF72F8 /* Icon-Small@2x.png in Resources */,
+				5336EE8613CD2BA500FF72F8 /* Icon.png in Resources */,
+				5336EE8713CD2BA500FF72F8 /* Icon@2x.png in Resources */,
+				5336EE8813CD2BA500FF72F8 /* Location.png in Resources */,
+				5336EE8913CD2BA500FF72F8 /* SFIcon.png in Resources */,
+				539D2AA013CE008900DD08D0 /* MapImageDetailController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +290,7 @@
 				5352627B1396E56200AED924 /* BarMapLookup.m in Sources */,
 				53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */,
 				53F86EB313B59124006D196A /* MapPointView.m in Sources */,
+				539D2A9F13CE008900DD08D0 /* MapImageDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
