@@ -83,6 +83,11 @@
     [barImage resignFirstResponder];
 }
 
+- (IBAction) refreshImage:(id)sender {
+    NSLog(@"Hit the refresh button");
+    [self fetchBarImage];
+}
+
 - (void) fetchBarImage {
     // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
     // treating it like a string causes a newline to show up and fucks up the URL).

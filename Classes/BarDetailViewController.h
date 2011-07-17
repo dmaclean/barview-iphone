@@ -26,9 +26,12 @@
 	IBOutlet UITextField* stateField;
 	IBOutlet UITextField* zipField;
     
+    IBOutlet UIButton* refresh;
+    
     IBOutlet UIImageView* barImage;
 }
 
+-(IBAction) refreshImage:(id)sender;
 -(void) fetchBarImage;
 
 @property (nonatomic, assign) Bar* bar;

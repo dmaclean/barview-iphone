@@ -22,11 +22,14 @@
     NSMutableString* parseState;
     
     IBOutlet UIImageView* barImage;
+    
+    IBOutlet UIButton* refresh;
 }
 
 @property (nonatomic, assign) NSString* barId;
 @property (nonatomic, assign) NSString* barName;
 
+-(IBAction) refreshImage:(id)sender;
 -(void) fetchBarImage;
 
 @end
