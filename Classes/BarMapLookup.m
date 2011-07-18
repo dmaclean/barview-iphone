@@ -76,6 +76,15 @@
 	[locationManager startUpdatingLocation];
 }
 
+/**
+ * Set the navigation bar to be hidden when showing the map.
+ */
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void) mapView:(MKMapView*) mv didAddAnnotationViews:(NSArray*) views {
 	NSLog(@"in didAddAnnotationViews");
 	
@@ -83,7 +92,7 @@
 	
 	id <MKAnnotation> mp = [annotationView annotation];
 	
-	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 500, 500);
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 1000, 1000);
 	
 	[mv setRegion:region animated:YES];
 }
@@ -91,7 +100,7 @@
 - (void)	locationManager:(CLLocationManager *)manager 
 	 didUpdateToLocation:(CLLocation *)newLocation	
 			fromLocation:(CLLocation *)oldLocation {
-	NSLog(@"%@", newLocation);
+	//NSLog(@"%@", newLocation);
 	
 	// How many seconds ago was this new location created?
 	NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
@@ -104,18 +113,18 @@
 		return;
 	}
 	
-	MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] title:@"piss"];
+	//MapPoint *mp = [[MapPoint alloc] initWithCoordinate:[newLocation coordinate] title:@"piss"];
     //[annotations addObject:mp];
 	//[mapView addAnnotations:annotations];
-    [mapView addAnnotation:mp];
-	[mp release];
+    //[mapView addAnnotation:mp];
+	//[mp release];
 	
 	[locationManager stopUpdatingLocation];
     
-    NSString* newLatStr = [[NSString alloc] initWithFormat:@"%f", [newLocation coordinate].latitude];
+    /*NSString* newLatStr = [[NSString alloc] initWithFormat:@"%f", [newLocation coordinate].latitude];
     NSString* newLngStr = [[NSString alloc] initWithFormat:@"%f", [newLocation coordinate].longitude];
     [self fetchNearbyBars:newLatStr withLongitude:newLngStr];
-    NSLog(@"Fetching nearby bars");
+    NSLog(@"Fetching nearby bars");*/
 }
 
 /*
@@ -125,8 +134,8 @@
  * The coordinates are collected in the callback function connectionDidFinishLoading.
  */
 - (void) getMapCoordinates:(NSString*) address {
-//	NSString* geocodingURL = @"http://maps.google.com/maps/geo?q=%@&output=%@";
-    NSString* geocodingURL = @"http://localhost:8888/barview/index.php/google";
+	NSString* geocodingURL = @"http://maps.google.com/maps/geo?q=%@&output=%@";
+   // NSString* geocodingURL = @"http://localhost:8888/barview/index.php/google";
 	
 	NSString* finalURL = [NSString stringWithFormat:geocodingURL, address, GOOGLE_OUPUT_FORMAT_CSV];
 	finalURL = [finalURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -188,7 +197,6 @@
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
 	
     if (connection == lookupConnection) {
-            
         NSString* connectionString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         
         if ([connectionString length] > 0) {
@@ -218,8 +226,8 @@
                 loc.latitude = [lat floatValue];
                 loc.longitude = [lon floatValue];
                 MapPoint *mp = [[MapPoint alloc] initWithCoordinate:loc title:[locationField text]];
-                [mapView addAnnotation:mp];
-                //[annotations addObject:mp];
+                //[mapView addAnnotation:mp];
+
                 
                 // Get surrounding bars
                 //NearbyBarFetcher* fetcher = [[NearbyBarFetcher alloc] init];
@@ -260,6 +268,7 @@
         
         for (int i=0; i<[bars count]; i++) {
             Bar* b = [bars objectAtIndex:i];
+            NSLog(@"Creating annotation for bar %@ with id %@", [b name], [b barId]);
             
             CLLocationCoordinate2D loc;
             loc.latitude = [[b latitude] floatValue];
@@ -290,9 +299,6 @@
     if(!detailViewController)
         detailViewController = [[MapImageDetailController alloc] init];
     
-    // the detail view does not want a toolbar so hide it
-    //[self.navigationController setToolbarHidden:YES animated:NO];
-    
     [detailViewController setBarId:[self barIdForAnnotation]];
     [detailViewController setBarName:barNameForAnnotation];
     
@@ -318,6 +324,10 @@
     if (annotationView == nil)
         annotationView = [[[MapPointView alloc] initWithAnnotation:myAnnotation reuseIdentifier:AnnotationViewID] autorelease];
     
+    // Set the bar id and name (this may have already been done on init)
+    [annotationView setBarId:[myAnnotation barId]];
+    [annotationView setBarName:[myAnnotation title]];
+    
     annotationView.pinColor = MKPinAnnotationColorPurple;
     annotationView.animatesDrop = YES;
     annotationView.canShowCallout = YES;
@@ -338,7 +348,6 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField*) tf {
-	NSLog(@"textFieldShouldReturn");
 	[self getMapCoordinates:[locationField text]];
 	[tf resignFirstResponder];
 	return YES;
@@ -387,7 +396,7 @@
  */
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
-    NSLog(@"Processing start tag %@", elementName);
+    //NSLog(@"Processing start tag %@", elementName);
     
     parseState = [[NSMutableString alloc] initWithString:elementName];
     if ([elementName isEqualToString:@"name"]) {
@@ -435,8 +444,15 @@
  */
 - (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
-    NSLog(@"Processing end tag %@", elementName);
+    //NSLog(@"Processing end tag %@", elementName);
     if ([elementName isEqualToString:@"bar"]) {
+        NSLog(@"About to create bar:");
+        NSLog(@"\tBar id: %@", barId);
+        NSLog(@"\tBar name: %@", barName);
+        NSLog(@"\tBar addr: %@", addr);
+        NSLog(@"\tBar lat: %@", latStr);
+        NSLog(@"\tBar lng: %@", lngStr);
+        
         Bar* b = [[Bar alloc] init];
         [b setBarId:[[NSString alloc] initWithString:barId]];
         [b setName:[[NSString alloc] initWithString:barName]];
