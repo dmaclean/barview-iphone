@@ -40,7 +40,7 @@
     // Set up the Navigation controller for Current Location
     CurrentLocation* currLocController = [[CurrentLocation alloc] init];
     UINavigationController* currLocNavController = [[UINavigationController alloc] initWithRootViewController:currLocController];
-    [[currLocNavController tabBarItem] setTitle:@"Bar Lookup"];
+    [[currLocNavController tabBarItem] setTitle:@"Current Location"];
 	
 	// Create three view controllers
 	UIViewController *vc1 = lookupNavController;//[[BarMapLookup alloc] init];
