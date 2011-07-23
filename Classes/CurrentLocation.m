@@ -65,6 +65,15 @@
 	[locationManager stopUpdatingLocation];
 }
 
+/**
+ * Set the navigation bar to be hidden when showing the map.
+ */
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 
 - (void)dealloc {
     [super dealloc];
@@ -101,9 +110,14 @@
     
     MapPoint* myAnnotation = (MapPoint*) annotation;
     
-    MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    //MKPinAnnotationView *annotationView = (MKPinAnnotationView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
+    MapPointView *annotationView = (MapPointView*)[mv dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
     if (annotationView == nil)
-        annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:myAnnotation reuseIdentifier:AnnotationViewID] autorelease];
+        annotationView = [[[MapPointView alloc] initWithAnnotation:myAnnotation reuseIdentifier:AnnotationViewID] autorelease];
+    
+    // Set the bar id and name (this may have already been done on init)
+    [annotationView setBarId:[myAnnotation barId]];
+    [annotationView setBarName:[myAnnotation title]];
     
     annotationView.pinColor = MKPinAnnotationColorPurple;
     annotationView.animatesDrop = YES;
@@ -114,15 +128,6 @@
                     action:@selector(showDetails:)
           forControlEvents:UIControlEventTouchUpInside];
     annotationView.rightCalloutAccessoryView = rightButton;
-    
-    //annotationView.annotation = myAnnotation;
-    //UIImage* img = [[UIImage alloc] initWithContentsOfFile:@"/Users/dmaclean/Desktop/boston.barstoolsports.jpeg"];
-    //[annotationView setImage:img];
-    
-    // Create a region with the current coordinate and set the MapView to zoom into it.
-    /*id <MKAnnotation> mp = [annotationView annotation];
-	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([mp coordinate], 250, 250);
-	[mv setRegion:region animated:YES];*/
     
     return annotationView;
 }
