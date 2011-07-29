@@ -74,6 +74,15 @@
     
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
     
+    // Only add the "+Faves" button if the user is logged in (otherwise we won't know the user id to
+    // associate the favorited bar to) and the bar isn't already a favorite.
+    if ([FacebookSingleton userLoggedIn] && ![FacebookSingleton hasBarAsFavorite:[self barId]]) {
+        UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"+Faves" style:UIBarButtonItemStylePlain
+                                                                         target:self action:@selector(addToFavorites:)];      
+        self.navigationItem.rightBarButtonItem = anotherButton;
+        [anotherButton release];
+    }
+    
     [self fetchBarImage];
 }
 
@@ -86,6 +95,36 @@
 - (IBAction) refreshImage:(id)sender {
     NSLog(@"Hit the refresh button");
     [self fetchBarImage];
+}
+
+- (void) addToFavorites:(id)sender {
+    // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
+    // treating it like a string causes a newline to show up and fucks up the URL).
+    NSMutableString* urlString = [[NSMutableString alloc] 
+                                  initWithFormat:@"http://localhost:8888/barview/index.php/rest/favorite/%d", [[self barId] integerValue]];
+    
+    NSLog(@"Trying URL %@ for bar id %@abc", urlString, [self barId]);
+    NSURL* url = [[NSURL alloc] initWithString:urlString];
+    
+    [urlString release];
+    
+    // Set up request
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPMethod:@"POST"];
+    [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"User_id"];
+    
+    // Clear out connection if one already exists
+    if (connectionForFavorites) {
+        [connectionForFavorites cancel];
+        [connectionForFavorites release];
+    }
+    
+    // Initialize the XML structure
+    [xmlForFaves release];
+    xmlForFaves = [[NSMutableData alloc] init];
+    
+    // Create and initiate the (non-blocking) connection
+    connectionForFavorites = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
 }
 
 - (void) fetchBarImage {
@@ -124,24 +163,32 @@
  * Append data to the structure that holds favorites as the data comes in.
  */
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [xmlData appendData:data];
+    if(connection == connectionForFavorites)
+        [xmlForFaves appendData:data];
+    else if(connection == connectionInProgress)
+        [xmlData appendData:data];
 }
 
 /**
  * Print out the XML result to console to show that we've received it all.
  */
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSString* xmlCheck = [[[NSString alloc] initWithData:xmlData encoding:NSUTF8StringEncoding] autorelease];
-    NSLog(@"xml check = %@", xmlCheck);
-    
-    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
-    [parser setDelegate:self];
-    
-    // Instruct the parser to start parsing - this is a blocking call.
-    [parser parse];
-    
-    //The parser is done at this point, so release it and reload the table data.
-    [parser release];
+    if (connection == connectionInProgress) {
+        NSString* xmlCheck = [[[NSString alloc] initWithData:xmlData encoding:NSUTF8StringEncoding] autorelease];
+        NSLog(@"xml check = %@", xmlCheck);
+        
+        NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
+        [parser setDelegate:self];
+        
+        // Instruct the parser to start parsing - this is a blocking call.
+        [parser parse];
+        
+        //The parser is done at this point, so release it and reload the table data.
+        [parser release];
+    }
+    else {
+        NSLog(@"Added to faves");
+    }
 }
 
 /**
@@ -154,8 +201,15 @@
     [connection release];
     connection = nil;
     
-    [xmlData release];
-    xmlData = nil;
+    if (connection == connectionInProgress) {
+        [xmlData release];
+        xmlData = nil;
+    }
+    else {
+        [xmlForFaves release];
+        xmlForFaves = nil;
+
+    }
     
     NSString* errorString = [NSString stringWithFormat:@"Fetch failed %@", [error localizedDescription]];
     

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BarDetailViewController.h"
+#import "FacebookSingleton.h"
 
 @interface FavoritesController : UITableViewController <NSXMLParserDelegate> {
 	BarDetailViewController* detailViewController;

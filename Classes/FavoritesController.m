@@ -21,17 +21,6 @@
 		[tbi setTitle:@"Favorite Bars"];
 		
 		favorites = [[NSMutableArray alloc] init];
-		/*for (int i=0; i<5; i++) {
-			Bar* b = [[Bar alloc] init];
-			[b setName:@"Test %d"];
-			[b setAddr:@"1 Main St"];
-			[b setCity:@"Medfield"];
-			[b setState:@"MA"];
-			[b setZip:@"02052"];
-			
-			[favorites addObject:b];
-			[b release];
-		}*/
         [self loadFavorites];
 		
 		// Set the nav bar with the edit button
@@ -123,7 +112,7 @@
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
         Bar* b = [favorites objectAtIndex:[indexPath row]];
         NSString* bar_id = [b barId];
-        [b release];
+        //[b release];
         
 		//////////////////////////////////////////////////////////////////////
         // Send a message to the REST server that we're deleting a favorite.
@@ -135,7 +124,7 @@
         
         // Construct request object
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
-        [request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
+        [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"user_id"];
         [request setHTTPMethod:@"DELETE"];
         
         // Clear out existing connection if one exists
@@ -157,6 +146,11 @@
         
         // Remove the row from the data source
 		[favorites removeObjectAtIndex:[indexPath row]];
+        
+        // Remove the favorite from the favorites dictionary
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
+        [faves removeObjectForKey:bar_id];
 		
 		// Remove the row from the table view
 		[tv deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:/*YES*/UITableViewRowAnimationFade];
@@ -191,13 +185,26 @@
     [favorites removeAllObjects];
     [[self tableView] reloadData];
     
+    if (![FacebookSingleton userLoggedIn]) {
+        return;
+    }
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    //NSString* fbSessionId = [defaults objectForKey:@"FBAccessTokenKey"];
+    //NSString* fbExpirationDt = [defaults objectForKey:@"FBExpirationDateKey"];
+    //NSString* fbId = [defaults objectForKey:@"fbId"];
+
+    
     // Construct URL
-    //NSURL* url = [NSURL URLWithString:@"http://localhost:8080/barview/favorites.xml"];
     NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/rest/favorites"];
     
     // Construct request object
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
-    [request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
+    //[request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
+    //[request addValue:fbSessionId forHTTPHeaderField:@"FbSessionId"];
+    //[request addValue:fbExpirationDt forHTTPHeaderField:@"FbExpirationDate"];
+    [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"User_id"];
+    
     
     // Clear out existing connection if one exists
     if(connectionInProgress) {
@@ -226,6 +233,9 @@
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection {
     NSString* xmlCheck = [[[NSString alloc] initWithData:xmlData encoding:NSUTF8StringEncoding] autorelease];
     NSLog(@"xml check = %@", xmlCheck);
+    
+    // Clear out favorites so we can get the fresh list.
+    
     
     NSXMLParser* parser = [[NSXMLParser alloc] initWithData:xmlData];
     [parser setDelegate:self];
@@ -307,6 +317,9 @@
     
     NSLog(@"Processing end tag %@", elementName);
     if ([elementName isEqualToString:@"favorite"]) {
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
+        
         Bar* b = [[Bar alloc] init];
         [b setBarId:[[NSString alloc] initWithString:barId]];
         [b setName:[[NSString alloc] initWithString:barName]];
@@ -316,6 +329,7 @@
         [b setZip:@"02052"];
         
         [favorites addObject:b];
+        [faves setValue:[[NSString alloc] initWithString:barName] forKey:[[NSString alloc] initWithString:barId]];
         [b release];
         
         [barName release];

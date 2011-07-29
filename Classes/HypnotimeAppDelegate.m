@@ -9,6 +9,7 @@
 #import "HypnotimeAppDelegate.h"
 #import "BarMapLookup.h"
 #import "CurrentLocation.h"
+#import "FacebookSingleton.h"
 #import "FavoritesController.h"
 #import "MapPoint.h"
 
@@ -23,6 +24,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+    
+    // Create a dictionary for favorite bars.
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
+    if (!faves) {
+        faves = [[NSMutableDictionary alloc] init];
+        [defaults setValue:faves forKey:@"faves"];
+        [defaults synchronize];
+    }
+    
 
 	// Create the tab bar controller
 	tabBarController = [[UITabBarController alloc] init];
@@ -41,18 +52,24 @@
     CurrentLocation* currLocController = [[CurrentLocation alloc] init];
     UINavigationController* currLocNavController = [[UINavigationController alloc] initWithRootViewController:currLocController];
     [[currLocNavController tabBarItem] setTitle:@"Current Location"];
+    
+    // Set up the view controller for facebook login
+    controller = [[DemoAppViewController alloc] init];
+    [[controller tabBarItem] setTitle:@"Facebook login"];
 	
 	// Create three view controllers
-	UIViewController *vc1 = lookupNavController;//[[BarMapLookup alloc] init];
+	UIViewController *vc1 = lookupNavController;
 	UIViewController *vc2 = navController;
-	UIViewController *vc3 = currLocNavController;//[[CurrentLocation alloc] init];
+	UIViewController *vc3 = currLocNavController;
+    UIViewController *vc4 = controller;
 	
 	// Make an array containing the two view controllers
-	NSArray *viewControllers = [NSArray arrayWithObjects:vc1, vc2, vc3, nil];
+	NSArray *viewControllers = [NSArray arrayWithObjects:vc1, vc2, vc3, vc4, nil];
 	
 	[vc1 release];
 	[vc2 release];
 	[vc3 release];
+    [vc4 release];
     
     [faveController release];
     [currLocController release];
@@ -66,7 +83,13 @@
     
     [self.window makeKeyAndVisible];
     
+    NSLog(@"Is logged in? %@", [FacebookSingleton userLoggedIn] ? @"YES" : @"NO");
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [[controller facebook] handleOpenURL:url];
 }
 
 

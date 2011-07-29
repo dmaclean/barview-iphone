@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "Base64.h"
+#import "FacebookSingleton.h"
 
 
 @interface MapImageDetailController : UIViewController <NSXMLParserDelegate> {
@@ -16,7 +17,9 @@
     NSString* barName;
     
     NSURLConnection*    connectionInProgress;
+    NSURLConnection*    connectionForFavorites;
     NSMutableData*      xmlData;
+    NSMutableData*      xmlForFaves;
     NSMutableString*    imageString;
     
     NSMutableString* parseState;
@@ -31,5 +34,6 @@
 
 -(IBAction) refreshImage:(id)sender;
 -(void) fetchBarImage;
+-(void) addToFavorites:(id)sender;
 
 @end

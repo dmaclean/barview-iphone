@@ -10,10 +10,14 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "DemoAppViewController.h"
+
 @interface HypnotimeAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
     UIWindow *window;
 	UITabBarController *tabBarController;
 	CLLocationManager *locationManager;
+    
+    DemoAppViewController* controller;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
