@@ -17,14 +17,12 @@
     if (self) {
 		
         // Custom initialization.
-		UITabBarItem* tbi = [self tabBarItem];
-		[tbi setTitle:@"Favorite Bars"];
 		
 		favorites = [[NSMutableArray alloc] init];
         [self loadFavorites];
 		
 		// Set the nav bar with the edit button
-		[[self navigationItem] setLeftBarButtonItem:[self editButtonItem]];
+		[[self navigationItem] setRightBarButtonItem:[self editButtonItem]];
 		
 		// Set the title of the nav bar to Homepwner when
 		// ItemsViewController is on top of the stack.
