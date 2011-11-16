@@ -41,6 +41,8 @@ static NSString* kAppId = @"177771455596726";
     return nil;
   }
 
+    // Set the Barview logged-in flag to false by default.
+    bvLoggedIn = NO;
 
   if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
     _permissions =  [[NSArray arrayWithObjects:
@@ -58,23 +60,17 @@ static NSString* kAppId = @"177771455596726";
     
     // User hasn't logged in.  Show login button.
     if (![FacebookSingleton userLoggedIn]) {
-        [self.label setText:@"Please log in"];
-        _getUserInfoButton.hidden = YES;
-        _getPublicInfoButton.hidden = YES;
-        _publishButton.hidden = YES;
-        _uploadPhotoButton.hidden = YES;
         _fbButton.isLoggedIn = NO;
         [_fbButton updateImage];
+        
+        barviewLogin.hidden = NO;
     }
     // User is logged in.  Show logout button.
     else {
-        [self.label setText:@"logged in"];
-        _getUserInfoButton.hidden = NO;
-        _getPublicInfoButton.hidden = NO;
-        _publishButton.hidden = NO;
-        _uploadPhotoButton.hidden = NO;
         _fbButton.isLoggedIn = YES;    
         [_fbButton updateImage];
+        
+        barviewLogin.hidden = YES;
     }
 }
 
@@ -82,12 +78,7 @@ static NSString* kAppId = @"177771455596726";
 // NSObject
 
 - (void)dealloc {
-  [_label release];
   [_fbButton release];
-  [_getUserInfoButton release];
-  [_getPublicInfoButton release];
-  [_publishButton release];
-  [_uploadPhotoButton release];
   [_facebook release];
   [_permissions release];
   [super dealloc];
@@ -122,6 +113,17 @@ static NSString* kAppId = @"177771455596726";
   } else {
     [self login];
   }
+}
+
+- (IBAction) bvButtonClick:(id)sender {
+    if(bvLoggedIn) {
+        NSLog(@"%@", @"User is logged in");
+        _fbButton.hidden = NO;
+    }
+    else {
+        NSLog(@"%@", @"User is not logged in");
+        _fbButton.hidden = YES;
+    }
 }
 
 /**

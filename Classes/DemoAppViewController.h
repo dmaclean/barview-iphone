@@ -27,10 +27,14 @@ FBDialogDelegate,
 FBSessionDelegate>{
   IBOutlet UILabel* _label;
   IBOutlet FBLoginButton* _fbButton;
+    IBOutlet UIButton* barviewLogin;
   IBOutlet UIButton* _getUserInfoButton;
   IBOutlet UIButton* _getPublicInfoButton;
   IBOutlet UIButton* _publishButton;
   IBOutlet UIButton* _uploadPhotoButton;
+    
+    Boolean* bvLoggedIn;
+    
   Facebook* _facebook;
   NSArray* _permissions;
 }
@@ -40,6 +44,8 @@ FBSessionDelegate>{
 @property(readonly) Facebook *facebook;
 
 -(IBAction)fbButtonClick:(id)sender;
+
+-(IBAction) bvButtonClick:(id)sender;
 
 -(IBAction)getUserInfo:(id)sender;
 
