@@ -18,7 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		[[self tabBarItem] setTitle:@"Search Bars"];
+        [[self navigationItem] setTitle:@"Bar Lookup"];
         
         //annotations = [[NSMutableArray alloc] init];
         
@@ -65,7 +65,7 @@
 - (void) viewDidLoad {
 	[super viewDidLoad];
     
-    [[self navigationController] setNavigationBarHidden:YES animated:NO];
+    //[[self navigationController] setNavigationBarHidden:YES animated:NO];
 	
 	// Put data retrieved into data structure
 	NSMutableData* d = [[NSMutableData alloc] init];
@@ -81,8 +81,6 @@
  */
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void) mapView:(MKMapView*) mv didAddAnnotationViews:(NSArray*) views {

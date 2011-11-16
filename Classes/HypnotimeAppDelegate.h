@@ -11,10 +11,12 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "DemoAppViewController.h"
+#import "BVActionsController.h"
 
 @interface HypnotimeAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
     UIWindow *window;
 	UITabBarController *tabBarController;
+    BVActionsController* bvActionsController;
 	CLLocationManager *locationManager;
     
     DemoAppViewController* controller;

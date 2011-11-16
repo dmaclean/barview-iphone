@@ -34,52 +34,14 @@
         [defaults synchronize];
     }
     
-
-	// Create the tab bar controller
-	tabBarController = [[UITabBarController alloc] init];
-	
-	// Set up the Navigation controller for the favorites
-	FavoritesController* faveController = [[FavoritesController alloc] init];
-	UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:faveController];
-	[[navController tabBarItem] setTitle:@"Favorite Bars"];
+    // Create the table view controller
+    bvActionsController = [[BVActionsController alloc] init];
     
-    // Set up the Navigation controller for Map Lookup
-    BarMapLookup* lookupController = [[BarMapLookup alloc] init];
-    UINavigationController* lookupNavController = [[UINavigationController alloc] initWithRootViewController:lookupController];
-    [[lookupNavController tabBarItem] setTitle:@"Bar Lookup"];
-    
-    // Set up the Navigation controller for Current Location
-    CurrentLocation* currLocController = [[CurrentLocation alloc] init];
-    UINavigationController* currLocNavController = [[UINavigationController alloc] initWithRootViewController:currLocController];
-    [[currLocNavController tabBarItem] setTitle:@"Current Location"];
-    
-    // Set up the view controller for facebook login
-    controller = [[DemoAppViewController alloc] init];
-    [[controller tabBarItem] setTitle:@"Facebook login"];
+    // Create an instance of a UINavigationController 
+    // its stack contains only itemsViewController 
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:bvActionsController];
 	
-	// Create three view controllers
-	UIViewController *vc1 = lookupNavController;
-	UIViewController *vc2 = navController;
-	UIViewController *vc3 = currLocNavController;
-    UIViewController *vc4 = controller;
-	
-	// Make an array containing the two view controllers
-	NSArray *viewControllers = [NSArray arrayWithObjects:vc1, vc2, vc3, vc4, nil];
-	
-	[vc1 release];
-	[vc2 release];
-	[vc3 release];
-    [vc4 release];
-    
-    [faveController release];
-    [currLocController release];
-    [lookupController release];
-	
-	// Attach them to the tab bar controller
-	[tabBarController setViewControllers:viewControllers];
-	
-	// Put the tabBarController's view on the window
-	[window addSubview:[tabBarController view]];
+    [window addSubview:[navController view]];
     
     [self.window makeKeyAndVisible];
     

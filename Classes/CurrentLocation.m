@@ -18,8 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
-		UITabBarItem *tbi = [self tabBarItem];
-		[tbi setTitle:@"Current Location"];
+        [[self navigationItem] setTitle:@"Current Location"];
 		
 		/*
 		 * Set up the location manager
@@ -70,8 +69,6 @@
  */
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 
