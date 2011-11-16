@@ -1,0 +1,998 @@
+THypnotime
+v7
+r0
+t328851580.661783
+cCheck dependencies
+cProcessInfoPlistFile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Info.plist Hypnotime-Info.plist
+cCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/MainWindow.xib
+cCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.xib
+cCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.xib
+cCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib
+cCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib
+cProcessPCH /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch.gch Hypnotime_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o /Users/dmaclean/Documents/Projects/iphone/barview/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o /Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/FavoritesController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Bar.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarMapLookup.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime normal i386
+cGenerateDSYMFile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app.dSYM /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+cTouch /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
+c000000004CC127E80000000000074190
+t1287727080
+s475536
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.h
+c000000004CC127DD00000000000001D0
+t1287727069
+s464
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.h
+c000000004CC1294D00000000000002FE
+t1287727437
+s766
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/MapKit.framework/MapKit
+c000000004CC12977000000000017E7F0
+t1287727479
+s1566704
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/dmaclean/Documents/Projects/iphone/Homepwner/Classes/ItemDetailViewController.h
+c000000004DE36AC100000000000001E7
+t1306749633
+s487
+i<UIKit/UIKit.h>
+i"Possession.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Homepwner/Classes/Possession.h
+c000000004DD91AA200000000000002F5
+t1306073762
+s757
+i<Foundation/Foundation.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnosister/HypnosisView.h
+c000000004DDA52E800000000000000D3
+t1306153704
+s211
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m
+c000000004DDA59BB0000000000000812
+t1306155451
+s2066
+i"HypnosisView.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.h
+c000000004DDC3DE10000000000000193
+t1306279393
+s403
+i<UIKit/UIKit.h>
+i<CoreLocation/CoreLocation.h>
+i<MapKit/MapKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m
+c000000004DDE02800000000000000C0D
+t1306395264
+s3085
+i"CurrentLocation.h"
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.xib
+c000000004DDC3E74000000000000440A
+t1306279540
+s17418
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.h
+c000000004DDA6A9A000000000000013D
+t1306159770
+s317
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m
+c000000004DDADEFC0000000000000867
+t1306189564
+s2151
+i"CurrentTimeViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.xib
+c000000004DDA6B7B00000000000051F2
+t1306159995
+s20978
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.h
+c000000004DDA5F4C00000000000000EF
+t1306156876
+s239
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m
+c000000004DDA691A00000000000007CB
+t1306159386
+s1995
+i"HypnosisViewController.h"
+i"HypnosisView.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.h
+c000000004DDC2F580000000000000204
+t1306275672
+s516
+i<UIKit/UIKit.h>
+i<MapKit/MapKit.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m
+c000000004DDC3E3F0000000000000D1C
+t1306279487
+s3356
+i"HypnotimeAppDelegate.h"
+i"HypnosisViewController.h"
+i"CurrentTimeViewController.h"
+i"CurrentLocation.h"
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.h
+c000000004DDA2B460000000000000214
+t1306143558
+s532
+i<Foundation/Foundation.h>
+i<CoreLocation/CoreLocation.h>
+i<MapKit/MapKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m
+c000000004DDA2CA200000000000001AA
+t1306143906
+s426
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Hypnotime_Prefix.pch
+c000000004DDA5D7D00000000000000BB
+t1306156413
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/MainWindow.xib
+c000000004DDA5D7D0000000000002112
+t1306156413
+s8466
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app
+t1306426704
+s272
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app.dSYM
+t1306426704
+s102
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/CurrentLocation.nib
+t1306279553
+s1193
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/CurrentTimeViewController.nib
+t1306160045
+s1865
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+t1306426704
+s37260
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Info.plist
+t1306156744
+s599
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/MainWindow.nib
+t1306156744
+s986
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/PkgInfo
+t1306156744
+s8
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o
+t1306426704
+s49636
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o
+t1306189565
+s43704
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o
+t1306156746
+s41132
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o
+t1306159387
+s41772
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Hypnotime.LinkFileList
+c000000004DDC361E000000000000041B
+t1306277406
+s1051
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o
+t1306279498
+s58104
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o
+t1306277406
+s12020
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o
+t1306156746
+s6328
+
+N/Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m
+c000000004DDA5D7D0000000000000168
+t1306156413
+s360
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.h
+c000000004DE39DF700000000000001F7
+t1306762743
+s503
+i<UIKit/UIKit.h>
+i"Possession.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m
+c000000004DE39F930000000000000A00
+t1306763155
+s2560
+i"ItemDetailViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.xib
+c000000004DE38EAD0000000000007119
+t1306758829
+s28953
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m
+c000000004DE38C250000000000000BF9
+t1306758181
+s3065
+i"ItemDetailViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.xib
+c000000004DE38EAD0000000000007119
+t1306758829
+s28953
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m
+c000000004DDA59BB0000000000000812
+t1306155451
+s2066
+i"HypnosisView.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.h
+c000000004DE3A1740000000000000206
+t1306763636
+s518
+i<Foundation/Foundation.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m
+c000000004DE397E70000000000000130
+t1306761191
+s304
+i"Bar.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.h
+c000000004DE4C00E00000000000001D4
+t1306837006
+s468
+i<UIKit/UIKit.h>
+i"Bar.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m
+c000000004DE60FF500000000000009F0
+t1306922997
+s2544
+i"BarDetailViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib
+c000000004DE4C02A00000000000067BB
+t1306837034
+s26555
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.h
+c000000004DE98C100000000000000306
+t1307151376
+s774
+i<UIKit/UIKit.h>
+i<MapKit/MapKit.h>
+i<CoreLocation/CoreLocation.h>
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m
+c000000004DE9A8FB000000000000160E
+t1307158779
+s5646
+i"BarMapLookup.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib
+c000000004DE9A13000000000000052FA
+t1307156784
+s21242
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.h
+c000000004DDC3DE10000000000000193
+t1306279393
+s403
+i<UIKit/UIKit.h>
+i<CoreLocation/CoreLocation.h>
+i<MapKit/MapKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m
+c000000004DDE02800000000000000C0D
+t1306395264
+s3085
+i"CurrentLocation.h"
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.xib
+c000000004DDC3E74000000000000440A
+t1306279540
+s17418
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.h
+c000000004DDA6A9A000000000000013D
+t1306159770
+s317
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m
+c000000004DDADEFC0000000000000867
+t1306189564
+s2151
+i"CurrentTimeViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.xib
+c000000004DDA6B7B00000000000051F2
+t1306159995
+s20978
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.h
+c000000004DE39D41000000000000015C
+t1306762561
+s348
+i<UIKit/UIKit.h>
+i"BarDetailViewController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m
+c000000004DE613E8000000000000118A
+t1306924008
+s4490
+i"FavoritesController.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.h
+c000000004DDA5F4C00000000000000EF
+t1306156876
+s239
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m
+c000000004DDA691A00000000000007CB
+t1306159386
+s1995
+i"HypnosisViewController.h"
+i"HypnosisView.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.h
+c000000004DDC2F580000000000000204
+t1306275672
+s516
+i<UIKit/UIKit.h>
+i<MapKit/MapKit.h>
+i<CoreLocation/CoreLocation.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m
+c000000004DE6AE1B0000000000000E64
+t1306963483
+s3684
+i"HypnotimeAppDelegate.h"
+i"HypnosisViewController.h"
+i"BarMapLookup.h"
+i"CurrentTimeViewController.h"
+i"CurrentLocation.h"
+i"FavoritesController.h"
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.h
+c000000004DDA2B460000000000000214
+t1306143558
+s532
+i<Foundation/Foundation.h>
+i<CoreLocation/CoreLocation.h>
+i<MapKit/MapKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m
+c000000004DDA2CA200000000000001AA
+t1306143906
+s426
+i"MapPoint.h"
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/Hypnotime_Prefix.pch
+c000000004DDA5D7D00000000000000BB
+t1306156413
+s187
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/MainWindow.xib
+c000000004DDA5D7D0000000000002112
+t1306156413
+s8466
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app
+t1307158780
+s374
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app.dSYM
+t1307158780
+s102
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/BarDetailViewController.nib
+t1306837193
+s1932
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/BarMapLookup.nib
+t1307156790
+s1645
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/CurrentLocation.nib
+t1306279553
+s1193
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/CurrentTimeViewController.nib
+t1306160045
+s1865
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+t1307158780
+s59888
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Info.plist
+t1306156744
+s599
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/ItemDetailViewController.nib
+t1306761612
+s2259
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/MainWindow.nib
+t1306156744
+s986
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/PkgInfo
+t1306156744
+s8
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Bar.o
+t1306763800
+s11100
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o
+t1306923286
+s45324
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarMapLookup.o
+t1307158780
+s62504
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o
+t1306760515
+s49628
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o
+t1306760515
+s43700
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/FavoritesController.o
+t1306924009
+s48564
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o
+t1306760515
+s41132
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o
+t1306760515
+s41764
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Hypnotime.LinkFileList
+c000000004DE6AE1C000000000000065A
+t1306963484
+s1626
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o
+t1307151381
+s59652
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/ItemDetailViewController.o
+t1306761612
+s46892
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o
+t1306760515
+s12016
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o
+t1306760515
+s6324
+
+N/Users/dmaclean/Documents/Projects/iphone/barview/main.m
+c000000004DDA5D7D0000000000000168
+t1306156413
+s360
+i<UIKit/UIKit.h>
+
+N/var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch.gch
+t1306156745
+s15453392
+
+N/var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch.gch
+t1306760515
+s15453392
+
+NHypnotime-Info.plist
+c000000004DDA5D7D000000000000038D
+t1306156413
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies328851580#328851580#0(0"0(0#1#0"8614911840#0"0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Bar.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328456600.387918
+e328456600.478962
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Bar.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m328456600#328456600#0(0"0(0#0#63"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m8599821248#2081"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/Bar.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Bar.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328455956.283272
+e328455956.364823
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@104"Compile /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m328455956#328455956#0(0"0(0#0#96"/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m8615341216#2134"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328616086.194379
+e328616086.287622
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@91"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m328616086#328616086#0(0"0(0#0#83"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m8618288512#2121"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarDetailViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarMapLookup.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328851580.399192
+e328851580.587996
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarMapLookup.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m328851580#328851580#0(0"0(0#0#72"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m8614732992#2099"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/BarMapLookup.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328119503.288746
+e328119504.206493
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@85"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m328119503#328119504#0(0"0(0#0#77"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m8601401280#2127"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.711055
+e328453315.840272
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m328453315#328453315#0(0"0(0#0#75"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m8614372512#2105"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentLocation.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327882364.929890
+e327882365.008121
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@95"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m327882364#327882365#0(0"0(0#0#87"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m8635603648#2147"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.611468
+e328453315.710938
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@93"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m328453315#328453315#0(0"0(0#0#85"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m8601142048#2125"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/CurrentTimeViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/FavoritesController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328616809.573209
+e328616809.664467
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/FavoritesController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m328616809#328616809#0(0"0(0#0#79"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m8616752000#2113"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/FavoritesController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/FavoritesController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327849546.049325
+e327849546.127308
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m327849546#327849546#0(0"0(0#0#81"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m8631438688#2128"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/../Hypnosister/HypnosisView.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o /Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.573811
+e328453315.676948
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m328453315#328453315#0(0"0(0#0#79"/Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m8612810144#2106"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/../Hypnosister/HypnosisView.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisView.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327852187.192578
+e327852187.337608
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m327852187#327852187#0(0"0(0#0#84"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m8632651456#2141"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnosisViewController.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.677065
+e328453315.765950
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m328453315#328453315#0(0"0(0#0#82"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m8599631072#2119"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnosisViewController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnosisViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327972298.643106
+e327972298.848604
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m327972298#327972298#0(0"0(0#0#82"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m8627151456#2137"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/HypnotimeAppDelegate.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328844177.836002
+e328844181.177625
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@88"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m328844177#328844181#0(0"0(0#0#80"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m8612050912#2115"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/HypnotimeAppDelegate.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/HypnotimeAppDelegate.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/ItemDetailViewController.o /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328454412.588450
+e328454412.692980
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/ItemDetailViewController.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@105"Compile /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m328454412#328454412#0(0"0(0#0#97"/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m8598398688#2136"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/ItemDetailViewController.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327970206.415248
+e327970206.506479
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m327970206#327970206#0(0"0(0#0#70"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m8638228992#2113"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/MapPoint.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o /Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.766049
+e328453315.858975
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m328453315#328453315#0(0"0(0#0#68"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m8613509536#2091"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/Classes/MapPoint.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/MapPoint.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s327849545.985952
+e327849546.049208
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@66"Compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m327849545#327849546#0(0"0(0#0#58"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m8642260576#2097"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/main.m -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o0#
+
+CCompileC build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o /Users/dmaclean/Documents/Projects/iphone/barview/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453315.487612
+e328453315.573697
+r1
+xCompileC
+xbuild/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o
+x/Users/dmaclean/Documents/Projects/iphone/barview/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/dmaclean/Documents/Projects/iphone/barview/main.m328453315#328453315#0(0"0(0#0#56"/Users/dmaclean/Documents/Projects/iphone/barview/main.m8615184512#2075"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -include /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch -c /Users/dmaclean/Documents/Projects/iphone/barview/main.m -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.xib
+s327972352.737247
+e327972353.226283
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.xib
+lSLF07#2@38"CompileXIB Classes/CurrentLocation.xib327972352#327972353#0(0"0(0#0#79"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.xib8637646528#629"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/CurrentLocation.nib /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentLocation.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.xib
+s327852844.685991
+e327852845.146405
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.xib
+lSLF07#2@48"CompileXIB Classes/CurrentTimeViewController.xib327852844#327852845#0(0"0(0#0#89"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.xib8643398848#649"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/CurrentTimeViewController.nib /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Classes/CurrentTimeViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/Hypnotime/MainWindow.xib
+s327849544.012428
+e327849544.582713
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib327849544#327849544#0(0"0(0#0#66"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/MainWindow.xib8625207744#611"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/MainWindow.nib /Users/dmaclean/Documents/Projects/iphone/Hypnotime/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.xib
+s328454565.980950
+e328454566.433705
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.xib
+lSLF07#2@59"CompileXIB ../Homepwner/Classes/BarDetailViewController.xib328454565#328454566#0(0"0(0#0#98"/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.xib8610501664#652"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/BarDetailViewController.nib /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/BarDetailViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.xib
+s328454412.108003
+e328454412.586212
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.xib
+lSLF07#2@60"CompileXIB ../Homepwner/Classes/ItemDetailViewController.xib328454412#328454412#0(0"0(0#0#99"/Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.xib8611259520#654"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/ItemDetailViewController.nib /Users/dmaclean/Documents/Projects/iphone/barview/../Homepwner/Classes/ItemDetailViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib
+s328529993.461324
+e328529993.908552
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib
+lSLF07#2@46"CompileXIB Classes/BarDetailViewController.xib328529993#328529993#0(0"0(0#0#85"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib7017223282087651328#639"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/BarDetailViewController.nib /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarDetailViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib
+s328849590.281461
+e328849590.809693
+r1
+xCompileXIB
+x/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib
+lSLF07#2@35"CompileXIB Classes/BarMapLookup.xib328849590#328849590#0(0"0(0#0#74"/Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib8614242560#617"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/BarMapLookup.nib /Users/dmaclean/Documents/Projects/iphone/barview/Classes/BarMapLookup.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentLocation.xib
+r0
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/Classes/CurrentTimeViewController.xib
+r0
+
+CCompileXIB /Users/dmaclean/Documents/Projects/iphone/barview/MainWindow.xib
+r0
+
+CGenerateDSYMFile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app.dSYM /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+s328119504.445903
+e328119504.476535
+r1
+xGenerateDSYMFile
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app.dSYM
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/Hypnotime.app.dSYM build/Debug-iphonesimulator/Hypnotime.app/Hypnotime328119504#328119504#0(0"0(0#0#103"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime8640399808#428"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app.dSYM0#
+
+CGenerateDSYMFile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app.dSYM /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+s328851580.625958
+e328851580.657575
+r1
+xGenerateDSYMFile
+x/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app.dSYM
+x/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+lSLF07#2@115"GenerateDSYMFile build/Debug-iphonesimulator/Hypnotime.app.dSYM build/Debug-iphonesimulator/Hypnotime.app/Hypnotime328851580#328851580#0(0"0(0#0#101"/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime8616576160#422"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app.dSYM0#
+
+CLd /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime normal i386
+s328119504.206593
+e328119504.445802
+r1
+xLd
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+xnormal
+xi386
+lSLF07#2@108"Link /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime328119504#328119504#0(0"0(0#0#0"8624345600#1017"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -filelist /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Hypnotime.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework MapKit -framework CoreLocation -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime0#
+
+CLd /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime normal i386
+s328851580.588095
+e328851580.625852
+r1
+xLd
+x/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime
+xnormal
+xi386
+lSLF07#2@106"Link /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime328851580#328851580#0(0"0(0#0#0"8616919104#1007"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -filelist /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Objects-normal/i386/Hypnotime.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework MapKit -framework CoreLocation -o /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Hypnotime0#
+
+CProcessInfoPlistFile /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Info.plist Hypnotime-Info.plist
+s327849544.008486
+e327849544.012340
+r1
+xProcessInfoPlistFile
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Info.plist
+xHypnotime-Info.plist
+lSLF07#2@28"Process Hypnotime-Info.plist327849544#327849544#0(0"0(0#0#72"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Hypnotime-Info.plist8632399264#524"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Hypnotime-Info.plist -genpkginfo /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app/Info.plist0#
+
+CProcessInfoPlistFile /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app/Info.plist Hypnotime-Info.plist
+r0
+
+CProcessPCH /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch.gch Hypnotime_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s327849544.582847
+e327849545.985704
+r1
+xProcessPCH
+x/var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch.gch
+xHypnotime_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile Hypnotime_Prefix.pch327849544#327849545#0(0"0(0#0#72"/Users/dmaclean/Documents/Projects/iphone/Hypnotime/Hypnotime_Prefix.pch8620086912#1974"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/Hypnotime_Prefix.pch -o /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-azjkujpcoavjtkbfyqfnrinxilmh/Hypnotime_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch.gch Hypnotime_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s328453314.479195
+e328453315.487511
+r1
+xProcessPCH
+x/var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch.gch
+xHypnotime_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@31"Precompile Hypnotime_Prefix.pch328453314#328453315#0(0"0(0#0#70"/Users/dmaclean/Documents/Projects/iphone/barview/Hypnotime_Prefix.pch8605901216#1954"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-generated-files.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-own-target-headers.hmap -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-all-target-headers.hmap -iquote /Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/Hypnotime-project-headers.hmap -F/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/include -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources/i386 -I/Users/dmaclean/Documents/Projects/iphone/barview/build/Hypnotime.build/Debug-iphonesimulator/Hypnotime.build/DerivedSources -c /Users/dmaclean/Documents/Projects/iphone/barview/Hypnotime_Prefix.pch -o /var/folders/xg/xgsWiqTKFbOEbgjd6D-38++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Hypnotime_Prefix-davibmafjtwvblbcpfnhyiyqwtjm/Hypnotime_Prefix.pch.gch0#
+
+CTouch /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app
+s328119504.476628
+e328119504.480253
+r1
+xTouch
+x/Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app
+lSLF07#2@99"Touch /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app328119504#328119504#0(0"0(0#0#0"8639497184#306"    cd /Users/dmaclean/Documents/Projects/iphone/Hypnotime    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/dmaclean/Documents/Projects/iphone/Hypnotime/build/Debug-iphonesimulator/Hypnotime.app0#
+
+CTouch /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app
+s328851580.657666
+e328851580.661737
+r1
+xTouch
+x/Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app
+lSLF07#2@97"Touch /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app328851580#328851580#0(0"0(0#0#0"8614549696#302"    cd /Users/dmaclean/Documents/Projects/iphone/barview    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/dmaclean/Documents/Projects/iphone/barview/build/Debug-iphonesimulator/Hypnotime.app0#
+
