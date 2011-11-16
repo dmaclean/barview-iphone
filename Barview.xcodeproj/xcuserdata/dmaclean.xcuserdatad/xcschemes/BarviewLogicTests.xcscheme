@@ -11,6 +11,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "53C57E3714736D5400BD7291"
+               BuildableName = "BarviewLogicTests.octest"
+               BlueprintName = "BarviewLogicTests"
+               ReferencedContainer = "container:Barview.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

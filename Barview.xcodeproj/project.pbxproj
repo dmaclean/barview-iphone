@@ -44,7 +44,6 @@
 		539D2A9F13CE008900DD08D0 /* MapImageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */; };
 		539D2AA013CE008900DD08D0 /* MapImageDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */; };
 		53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4FCF113B42A7F00DE5B66 /* Base64.m */; };
-		53BF132413E2365E0078F92A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 53BF132313E2365E0078F92A /* Default.png */; };
 		53C57E3914736D5400BD7291 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		53C57E3A14736D5400BD7291 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		53C57E3B14736D5400BD7291 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -133,9 +132,9 @@
 		53A4FCF113B42A7F00DE5B66 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		53BF132313E2365E0078F92A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		53C57E3814736D5400BD7291 /* BarviewLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarviewLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53C57E3E14736D5400BD7291 /* BarviewLogicTests-Info.plist */ = {isa = PBXFileReference; path = "BarviewLogicTests-Info.plist"; sourceTree = "<group>"; };
+		53C57E3E14736D5400BD7291 /* BarviewLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarviewLogicTests-Info.plist"; sourceTree = "<group>"; };
 		53C57E4014736D5400BD7291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53C57E4214736D5400BD7291 /* BarviewLogicTests-Prefix.pch */ = {isa = PBXFileReference; path = "BarviewLogicTests-Prefix.pch"; sourceTree = "<group>"; };
+		53C57E4214736D5400BD7291 /* BarviewLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarviewLogicTests-Prefix.pch"; sourceTree = "<group>"; };
 		53C57E4314736D5400BD7291 /* BarviewLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarviewLogicTests.h; sourceTree = "<group>"; };
 		53C57E4514736D5400BD7291 /* BarviewLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarviewLogicTests.m; sourceTree = "<group>"; };
 		53F86EB113B59124006D196A /* MapPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPointView.h; sourceTree = "<group>"; };
@@ -425,7 +424,6 @@
 				5336568613D2896500B3E3F7 /* FBDialog.bundle in Resources */,
 				533B48ED13DD150C00ADD714 /* DemoAppViewController.xib in Resources */,
 				533B48F013DD16BB00ADD714 /* FBConnect.bundle in Resources */,
-				53BF132413E2365E0078F92A /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +631,7 @@
 				53C57E4914736D5400BD7291 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Barview" */ = {
 			isa = XCConfigurationList;
