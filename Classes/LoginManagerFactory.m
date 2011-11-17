@@ -8,11 +8,15 @@
 
 #import "LoginManagerFactory.h"
 
+static FacebookLoginManager* facebookLoginManager;
 
 @implementation LoginManagerFactory
+
 + (BaseLoginManager*) getLoginManager {
-    FacebookLoginManager* fbLoginManager = [[[FacebookLoginManager alloc] init] autorelease];
+    if (!facebookLoginManager) {
+        facebookLoginManager = [[FacebookLoginManager alloc] init];
+    }
     
-    return fbLoginManager;
+    return facebookLoginManager;
 }
 @end

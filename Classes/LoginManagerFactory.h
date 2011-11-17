@@ -12,7 +12,7 @@
 #import "FacebookLoginManager.h"
 
 @interface LoginManagerFactory : NSObject {
-    
+
 }
 + (BaseLoginManager*) getLoginManager;
 @end
