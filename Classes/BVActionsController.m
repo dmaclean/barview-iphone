@@ -25,8 +25,6 @@
     favoritesController = [[FavoritesController alloc] init];
     loginController = [[DemoAppViewController alloc] init];
     barMapLookup = [[BarMapLookup alloc] init];
-
-    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
     self = [super initWithStyle:style];
     if (self) {
@@ -34,23 +32,13 @@
         [[self navigationItem] setTitle:@"Barview"];
         
         bvActions = [[NSMutableArray alloc] init];
-        
-        [bvActions addObject:[[NSString alloc] initWithFormat:@"%@",ACTION_FINDBARS]];
-        [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_CURRLOC]];
-        
-        if ([lm userLoggedIn]) {
-            [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_FAVORITES]];
-            [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_LOGOUT]];
-        }
-        else {
-            [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_LOGIN]];
-        }
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [bvActions release];
     [loginController release];
     [super dealloc];
 }
@@ -86,6 +74,22 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
+    [bvActions removeAllObjects];
+    [bvActions addObject:ACTION_FINDBARS];
+    [bvActions addObject:ACTION_CURRLOC];
+    
+    if ([lm userLoggedIn]) {
+        [bvActions addObject:ACTION_FAVORITES];
+        [bvActions addObject:ACTION_LOGOUT];
+    }
+    else {
+        [bvActions addObject:ACTION_LOGIN];
+    }
+
+    [[self tableView] reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
