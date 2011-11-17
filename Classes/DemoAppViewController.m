@@ -59,9 +59,10 @@ static NSString* kAppId = @"177771455596726";
  * Set initial view
  */
 - (void)viewDidLoad {
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
     // User hasn't logged in.  Show login button.
-    if (![facebook isSessionValid]) {
+    if (![lm userLoggedIn]) {
         _fbButton.isLoggedIn = NO;
         [_fbButton updateImage];
         
