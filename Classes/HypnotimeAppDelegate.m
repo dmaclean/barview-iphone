@@ -9,7 +9,6 @@
 #import "HypnotimeAppDelegate.h"
 #import "BarMapLookup.h"
 #import "CurrentLocation.h"
-#import "FacebookSingleton.h"
 #import "FavoritesController.h"
 #import "MapPoint.h"
 
@@ -25,6 +24,8 @@
     
     // Override point for customization after application launch.
     
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
     // Create a dictionary for favorite bars.
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
@@ -37,6 +38,15 @@
     // Create the table view controller
     bvActionsController = [[BVActionsController alloc] init];
     
+    /*
+     * We need to get a reference to the DemoAppViewController that contains
+     * a Facebook object.  This is necessary so we can utilize the FB Session
+     * callbacks once we handle the URL we get back from FB servers on login/
+     * logoff.
+     * Without a reference to this the callbacks will never occur.
+     */
+    controller = [bvActionsController loginController];
+    
     // Create an instance of a UINavigationController 
     // its stack contains only itemsViewController 
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:bvActionsController];
@@ -45,13 +55,18 @@
     
     [self.window makeKeyAndVisible];
     
-    NSLog(@"Is logged in? %@", [FacebookSingleton userLoggedIn] ? @"YES" : @"NO");
+    NSLog(@"Is logged in? %@", [lm userLoggedIn] ? @"YES" : @"NO");
     
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     return [[controller facebook] handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[controller facebook] handleOpenURL:url]; 
 }
 
 

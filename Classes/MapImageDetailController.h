@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "Base64.h"
-#import "FacebookSingleton.h"
+#import "BaseLoginManager.h"
+#import "LoginManagerFactory.h"
 
 
 @interface MapImageDetailController : UIViewController <NSXMLParserDelegate> {

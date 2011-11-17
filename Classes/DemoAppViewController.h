@@ -16,15 +16,13 @@
 
 
 #import <UIKit/UIKit.h>
-#import "FacebookSingleton.h"
+#import "BaseLoginManager.h"
 #import "FBConnect.h"
 #import "FBLoginButton.h"
+#import "LoginManagerFactory.h"
 
 
-@interface DemoAppViewController : UIViewController
-<FBRequestDelegate,
-FBDialogDelegate,
-FBSessionDelegate>{
+@interface DemoAppViewController : UIViewController <FBSessionDelegate> {
   IBOutlet UILabel* _label;
   IBOutlet FBLoginButton* _fbButton;
     IBOutlet UIButton* barviewLogin;
@@ -35,13 +33,13 @@ FBSessionDelegate>{
     
     Boolean* bvLoggedIn;
     
-  Facebook* _facebook;
+  Facebook* facebook;
   NSArray* _permissions;
 }
 
 @property(nonatomic, retain) UILabel* label;
 
-@property(readonly) Facebook *facebook;
+@property(nonatomic, retain) Facebook *facebook;
 
 -(IBAction)fbButtonClick:(id)sender;
 

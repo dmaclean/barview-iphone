@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "BarMapLookup.h"
+#import "BaseLoginManager.h"
 #import "CurrentLocation.h"
 #import "DemoAppViewController.h"
-#import "FacebookSingleton.h"
 #import "FavoritesController.h"
+#import "LoginManagerFactory.h"
 
 
 @interface BVActionsController : UITableViewController {
@@ -29,5 +30,7 @@
     DemoAppViewController* loginController;
     FavoritesController* favoritesController;
 }
+
+@property (retain) DemoAppViewController* loginController;
 
 @end

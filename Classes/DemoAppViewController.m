@@ -26,7 +26,7 @@ static NSString* kAppId = @"177771455596726";
 
 @implementation DemoAppViewController
 
-@synthesize label = _label, facebook = _facebook;
+@synthesize label = _label, facebook;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // UIViewController
@@ -41,13 +41,16 @@ static NSString* kAppId = @"177771455596726";
     return nil;
   }
 
+    facebook = [[Facebook alloc] initWithAppId:kAppId];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+    
     // Set the Barview logged-in flag to false by default.
     bvLoggedIn = NO;
-
-  if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-    _permissions =  [[NSArray arrayWithObjects:
-                      @"read_stream", @"publish_stream", @"offline_access",nil] retain];
-  }
 
   return self;
 }
@@ -56,10 +59,9 @@ static NSString* kAppId = @"177771455596726";
  * Set initial view
  */
 - (void)viewDidLoad {
-    _facebook = [[Facebook alloc] initWithAppId:kAppId];
     
     // User hasn't logged in.  Show login button.
-    if (![FacebookSingleton userLoggedIn]) {
+    if (![facebook isSessionValid]) {
         _fbButton.isLoggedIn = NO;
         [_fbButton updateImage];
         
@@ -79,7 +81,7 @@ static NSString* kAppId = @"177771455596726";
 
 - (void)dealloc {
   [_fbButton release];
-  [_facebook release];
+  [facebook release];
   [_permissions release];
   [super dealloc];
 }
@@ -91,14 +93,17 @@ static NSString* kAppId = @"177771455596726";
  * Show the authorization dialog.
  */
 - (void)login {
-    [_facebook authorize:_permissions delegate:self];
+    //[facebook authorize:_permissions delegate:self];
+    if (![facebook isSessionValid]) {
+        [facebook authorize:nil delegate:self];
+    }
 }
 
 /**
  * Invalidate the access token and clear the cookie.
  */
 - (void)logout {
-  [_facebook logout:self];
+  [facebook logout:self];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -126,76 +131,20 @@ static NSString* kAppId = @"177771455596726";
     }
 }
 
-/**
- * Make a Graph API Call to get information about the current logged in user.
- */
-- (IBAction)getUserInfo:(id)sender {
-  [_facebook requestWithGraphPath:@"me" andDelegate:self];
+- (void) publishStream:(id)sender {
+    
 }
 
-
-/**
- * Make a REST API call to get a user's name using FQL.
- */
-- (IBAction)getPublicInfo:(id)sender {
-  NSMutableDictionary * params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                  @"SELECT uid,name FROM user WHERE uid=4", @"query",
-                                  nil];
-  [_facebook requestWithMethodName:@"fql.query"
-                         andParams:params
-                     andHttpMethod:@"POST"
-                       andDelegate:self];
+- (void) getPublicInfo:(id)sender {
+    
 }
 
-/**
- * Open an inline dialog that allows the logged in user to publish a story to his or
- * her wall.
- */
-- (IBAction)publishStream:(id)sender {
-
-  SBJSON *jsonWriter = [[SBJSON new] autorelease];
-
-  NSDictionary* actionLinks = [NSArray arrayWithObjects:[NSDictionary dictionaryWithObjectsAndKeys:
-                               @"Always Running",@"text",@"http://itsti.me/",@"href", nil], nil];
-
-  NSString *actionLinksStr = [jsonWriter stringWithObject:actionLinks];
-  NSDictionary* attachment = [NSDictionary dictionaryWithObjectsAndKeys:
-                               @"a long run", @"name",
-                               @"The Facebook Running app", @"caption",
-                               @"it is fun", @"description",
-                               @"http://itsti.me/", @"href", nil];
-  NSString *attachmentStr = [jsonWriter stringWithObject:attachment];
-  NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 @"Share on Facebook",  @"user_message_prompt",
-                                 actionLinksStr, @"action_links",
-                                 attachmentStr, @"attachment",
-                                 nil];
-
-
-  [_facebook dialog:@"feed"
-          andParams:params
-        andDelegate:self];
+- (void) uploadPhoto:(id)sender {
+    
 }
 
-/**
- * Upload a photo.
- */
-- (IBAction)uploadPhoto:(id)sender {
-  NSString *path = @"http://www.facebook.com/images/devsite/iphone_connect_btn.jpg";
-  NSURL *url = [NSURL URLWithString:path];
-  NSData *data = [NSData dataWithContentsOfURL:url];
-  UIImage *img  = [[UIImage alloc] initWithData:data];
-
-  NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                 img, @"picture",
-                                 nil];
-
-  [_facebook requestWithGraphPath:@"me/photos"
-                        andParams:params
-                        andHttpMethod:@"POST"
-                        andDelegate:self];
-
-  [img release];
+- (void) getUserInfo:(id)sender {
+    
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -208,20 +157,15 @@ static NSString* kAppId = @"177771455596726";
  * Called when the user has logged in successfully.
  */
 - (void)fbDidLogin {
-  [self.label setText:@"logged in"];
-  _getUserInfoButton.hidden = NO;
-  _getPublicInfoButton.hidden = NO;
-  _publishButton.hidden = NO;
-  _uploadPhotoButton.hidden = NO;
-  _fbButton.isLoggedIn = YES;
-  [_fbButton updateImage];
-    
-    [_facebook requestWithGraphPath:@"me" andDelegate:self];
-    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[_facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[_facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
+    
+    _fbButton.isLoggedIn         = YES;
+    [_fbButton updateImage];
+    
+    barviewLogin.hidden = YES;
 }
 
 /**
@@ -235,13 +179,15 @@ static NSString* kAppId = @"177771455596726";
  * Called when the request logout has succeeded.
  */
 - (void)fbDidLogout {
-  [self.label setText:@"Please log in"];
+  //[self.label setText:@"Please log in"];
   _getUserInfoButton.hidden    = YES;
   _getPublicInfoButton.hidden   = YES;
   _publishButton.hidden        = YES;
   _uploadPhotoButton.hidden = YES;
   _fbButton.isLoggedIn         = NO;
   [_fbButton updateImage];
+    
+    barviewLogin.hidden = NO;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults removeObjectForKey:@"FBAccessTokenKey"];
@@ -254,18 +200,7 @@ static NSString* kAppId = @"177771455596726";
 }
 
 
-////////////////////////////////////////////////////////////////////////////////
-// FBRequestDelegate
 
-/**
- * Called when the Facebook API request has returned a response. This callback
- * gives you access to the raw response. It's called before
- * (void)request:(FBRequest *)request didLoad:(id)result,
- * which is passed the parsed response object.
- */
-- (void)request:(FBRequest *)request didReceiveResponse:(NSURLResponse *)response {
-  NSLog(@"received response");
-}
 
 /**
  * Called when a request returns and its response has been parsed into

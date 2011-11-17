@@ -106,6 +106,8 @@
 - (void) tableView:(UITableView*) tv commitEditingStyle:(UITableViewCellEditingStyle) editingStyle
  forRowAtIndexPath:(NSIndexPath*) indexPath {
 	
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
 	// Are we deleting?
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
         Bar* b = [favorites objectAtIndex:[indexPath row]];
@@ -122,7 +124,8 @@
         
         // Construct request object
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
-        [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"user_id"];
+        
+        [request addValue:[lm getLogonToken] forHTTPHeaderField:@"user_id"];
         [request setHTTPMethod:@"DELETE"];
         
         // Clear out existing connection if one exists
@@ -183,7 +186,8 @@
     [favorites removeAllObjects];
     [[self tableView] reloadData];
     
-    if (![FacebookSingleton userLoggedIn]) {
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    if (![lm userLoggedIn]) {
         return;
     }
     
@@ -201,7 +205,7 @@
     //[request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
     //[request addValue:fbSessionId forHTTPHeaderField:@"FbSessionId"];
     //[request addValue:fbExpirationDt forHTTPHeaderField:@"FbExpirationDate"];
-    [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"User_id"];
+    [request addValue:[lm getLogonToken] forHTTPHeaderField:@"User_id"];
     
     
     // Clear out existing connection if one exists

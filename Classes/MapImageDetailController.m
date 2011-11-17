@@ -63,6 +63,8 @@
 
 - (void) viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+    
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
 	
 	// Change the navigation item to display the name of possession.
     
@@ -76,7 +78,7 @@
     
     // Only add the "+Faves" button if the user is logged in (otherwise we won't know the user id to
     // associate the favorited bar to) and the bar isn't already a favorite.
-    if ([FacebookSingleton userLoggedIn] && ![FacebookSingleton hasBarAsFavorite:[self barId]]) {
+    if ([lm userLoggedIn] && ![lm hasBarAsFavorite:[self barId]]) {
         UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"+Faves" style:UIBarButtonItemStylePlain
                                                                          target:self action:@selector(addToFavorites:)];      
         self.navigationItem.rightBarButtonItem = anotherButton;
@@ -98,6 +100,8 @@
 }
 
 - (void) addToFavorites:(id)sender {
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
     // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
     // treating it like a string causes a newline to show up and fucks up the URL).
     NSMutableString* urlString = [[NSMutableString alloc] 
@@ -111,7 +115,7 @@
     // Set up request
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request addValue:[FacebookSingleton getLogonToken] forHTTPHeaderField:@"User_id"];
+    [request addValue:[lm getLogonToken] forHTTPHeaderField:@"User_id"];
     
     // Clear out connection if one already exists
     if (connectionForFavorites) {

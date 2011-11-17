@@ -10,10 +10,13 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#import "BaseLoginManager.h"
 #import "DemoAppViewController.h"
 #import "BVActionsController.h"
+#import "FBConnect.h"
+#import "LoginManagerFactory.h"
 
-@interface HypnotimeAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate> {
+@interface HypnotimeAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, MKMapViewDelegate, FBSessionDelegate> {
     UIWindow *window;
 	UITabBarController *tabBarController;
     BVActionsController* bvActionsController;

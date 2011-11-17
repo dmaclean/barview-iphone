@@ -11,6 +11,8 @@
 
 @implementation BVActionsController
 
+@synthesize loginController;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     ACTION_CURRLOC = [[NSString alloc] initWithFormat:@"Current location"];
@@ -24,7 +26,7 @@
     loginController = [[DemoAppViewController alloc] init];
     barMapLookup = [[BarMapLookup alloc] init];
 
-    
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
     self = [super initWithStyle:style];
     if (self) {
@@ -36,7 +38,7 @@
         [bvActions addObject:[[NSString alloc] initWithFormat:@"%@",ACTION_FINDBARS]];
         [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_CURRLOC]];
         
-        if ([FacebookSingleton userLoggedIn]) {
+        if ([lm userLoggedIn]) {
             [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_FAVORITES]];
             [bvActions addObject:[[NSMutableString alloc] initWithFormat:@"%@", ACTION_LOGOUT]];
         }
@@ -49,6 +51,7 @@
 
 - (void)dealloc
 {
+    [loginController release];
     [super dealloc];
 }
 

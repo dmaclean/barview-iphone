@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BarDetailViewController.h"
-#import "FacebookSingleton.h"
+#import "BaseLoginManager.h"
+#import "LoginManagerFactory.h"
 
 @interface FavoritesController : UITableViewController <NSXMLParserDelegate> {
 	BarDetailViewController* detailViewController;
