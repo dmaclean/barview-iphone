@@ -132,21 +132,43 @@ static NSString* kAppId = @"177771455596726";
     }
 }
 
-- (void) publishStream:(id)sender {
-    
+/**
+ * FACEBOOK FBREQUEST CALLBACKS
+ */
+- (void)request:(FBRequest *)request didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"Received FBRequest response");
 }
 
-- (void) getPublicInfo:(id)sender {
-    
-}
+/**
+ * Called when an error prevents the Facebook API request from completing
+ * successfully.
+ */
+- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
+    NSLog(@"%@", [error localizedDescription]);
+};
 
-- (void) uploadPhoto:(id)sender {
+/**
+ * Called when a request returns and its response has been parsed into
+ * an object. The resulting object may be a dictionary, an array, a string,
+ * or a number, depending on the format of the API response. If you need access
+ * to the raw response, use:
+ *
+ * (void)request:(FBRequest *)request
+ *      didReceiveResponse:(NSURLResponse *)response
+ */
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    if ([result isKindOfClass:[NSArray class]]) {
+        result = [result objectAtIndex:0];
+    }
     
-}
+    // Save off the user's name and facebook id.  The name can be used for personalization
+    // and the id will be sent with all requests to identify the user on the server side.
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[result objectForKey:@"id"] forKey:@"fbId"];
+    [defaults setObject:[result objectForKey:@"name"] forKey:@"fbName"];
+};
 
-- (void) getUserInfo:(id)sender {
-    
-}
+
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -162,6 +184,9 @@ static NSString* kAppId = @"177771455596726";
     [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
+    
+    // get information about the currently logged in user
+    [facebook requestWithGraphPath:@"me" andDelegate:self];
     
     _fbButton.isLoggedIn         = YES;
     [_fbButton updateImage];
@@ -199,43 +224,6 @@ static NSString* kAppId = @"177771455596726";
     
     NSLog(@"Logged out of Facebook");
 }
-
-
-
-
-/**
- * Called when a request returns and its response has been parsed into
- * an object. The resulting object may be a dictionary, an array, a string,
- * or a number, depending on the format of the API response. If you need access
- * to the raw response, use:
- *
- * (void)request:(FBRequest *)request
- *      didReceiveResponse:(NSURLResponse *)response
- */
-- (void)request:(FBRequest *)request didLoad:(id)result {
-  if ([result isKindOfClass:[NSArray class]]) {
-    result = [result objectAtIndex:0];
-  }
-  if ([result objectForKey:@"owner"]) {
-    [self.label setText:@"Photo upload Success"];
-  } else {
-    [self.label setText:[result objectForKey:@"name"]];
-      
-      // Save off the user's name and facebook id.  The name can be used for personalization
-      // and the id will be sent with all requests to identify the user on the server side.
-      NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-      [defaults setObject:[result objectForKey:@"id"] forKey:@"fbId"];
-      [defaults setObject:[result objectForKey:@"name"] forKey:@"fbName"];
-  }
-};
-
-/**
- * Called when an error prevents the Facebook API request from completing
- * successfully.
- */
-- (void)request:(FBRequest *)request didFailWithError:(NSError *)error {
-  [self.label setText:[error localizedDescription]];
-};
 
 
 ////////////////////////////////////////////////////////////////////////////////

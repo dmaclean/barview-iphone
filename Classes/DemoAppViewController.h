@@ -22,7 +22,7 @@
 #import "LoginManagerFactory.h"
 
 
-@interface DemoAppViewController : UIViewController <FBSessionDelegate> {
+@interface DemoAppViewController : UIViewController <FBSessionDelegate, FBRequestDelegate> {
   IBOutlet UILabel* _label;
   IBOutlet FBLoginButton* _fbButton;
     IBOutlet UIButton* barviewLogin;
