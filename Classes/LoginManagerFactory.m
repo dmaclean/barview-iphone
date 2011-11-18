@@ -8,15 +8,60 @@
 
 #import "LoginManagerFactory.h"
 
+static NSString* type = nil;
+
+static NSString* barviewType = @"BARVIEW";
+static NSString* facebookType = @"FACEBOOK";
+
+static Facebook* facebook;
+
 static FacebookLoginManager* facebookLoginManager;
+static BarviewLoginManager* barviewLoginManager;
+static BaseLoginManager* baseLoginManager;
 
 @implementation LoginManagerFactory
 
 + (BaseLoginManager*) getLoginManager {
-    if (!facebookLoginManager) {
-        facebookLoginManager = [[FacebookLoginManager alloc] init];
+    if (type == barviewType) {
+        if (!barviewLoginManager) {
+            barviewLoginManager = [[BarviewLoginManager alloc] init];
+        }
+        
+        return barviewLoginManager;
     }
+    else if (type == facebookType) {
+        if (!facebookLoginManager) {
+            facebookLoginManager = [[FacebookLoginManager alloc] init];
+        }
+        
+        return facebookLoginManager;
+    }
+    else {
+        if (!baseLoginManager) {
+            baseLoginManager = [[BaseLoginManager alloc] init];
+        }
+        
+        return baseLoginManager;
+    }
+}
+
++ (NSString*) getBarviewType {
+    return barviewType;
+}
+
++ (NSString*) getFacebookType {
+    return facebookType;
+}
+
++ (void) setFacebookObject:(Facebook *)fb {
+    facebook = fb;
     
-    return facebookLoginManager;
+    if ([facebook isSessionValid]) {
+        type = facebookType;
+    }
+}
+
++ (void) setLoginManagerType:(NSString*) lmType {
+    type = lmType;
 }
 @end

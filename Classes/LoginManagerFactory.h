@@ -9,10 +9,16 @@
 #import <Foundation/Foundation.h>
 
 #import "BaseLoginManager.h"
+#import "BarviewLoginManager.h"
 #import "FacebookLoginManager.h"
 
 @interface LoginManagerFactory : NSObject {
 
 }
 + (BaseLoginManager*) getLoginManager;
++ (void) setLoginManagerType:(NSString*) lmType;
++ (void) setFacebookObject:(Facebook*) fb;
+
++ (NSString*) getFacebookType;
++ (NSString*) getBarviewType;
 @end

@@ -94,8 +94,10 @@ static NSString* kAppId = @"177771455596726";
  * Show the authorization dialog.
  */
 - (void)login {
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
     //[facebook authorize:_permissions delegate:self];
-    if (![facebook isSessionValid]) {
+    if (![lm userLoggedIn]) {
         [facebook authorize:nil delegate:self];
     }
 }
@@ -122,7 +124,9 @@ static NSString* kAppId = @"177771455596726";
 }
 
 - (IBAction) bvButtonClick:(id)sender {
-    if(bvLoggedIn) {
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    
+    if([lm userLoggedIn]) {
         NSLog(@"%@", @"User is logged in");
         _fbButton.hidden = NO;
     }
@@ -192,6 +196,9 @@ static NSString* kAppId = @"177771455596726";
     [_fbButton updateImage];
     
     barviewLogin.hidden = YES;
+    
+    // Let the LoginManager factory know we've logged in with facebook.
+    [LoginManagerFactory setLoginManagerType:[LoginManagerFactory getFacebookType]];
 }
 
 /**
@@ -221,6 +228,9 @@ static NSString* kAppId = @"177771455596726";
     [defaults removeObjectForKey:@"fbId"];
     [defaults removeObjectForKey:@"fbName"];
     [defaults synchronize];
+    
+    // Let the LoginManager factory know we've logged out of facebook.
+    [LoginManagerFactory setLoginManagerType:nil];
     
     NSLog(@"Logged out of Facebook");
 }

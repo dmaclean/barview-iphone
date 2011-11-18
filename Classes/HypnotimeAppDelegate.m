@@ -24,8 +24,6 @@
     
     // Override point for customization after application launch.
     
-    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
-    
     // Create a dictionary for favorite bars.
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
@@ -46,6 +44,9 @@
      * Without a reference to this the callbacks will never occur.
      */
     controller = [bvActionsController loginController];
+    
+    [LoginManagerFactory setFacebookObject:[controller facebook]];
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
     // Create an instance of a UINavigationController 
     // its stack contains only itemsViewController 
