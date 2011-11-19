@@ -14,6 +14,11 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		53072E631470414000340B0C /* BVActionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53072E621470414000340B0C /* BVActionsController.m */; };
+		530C5FF01473DA5E00DB8FE6 /* LoginManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 530C5FEF1473DA5E00DB8FE6 /* LoginManagerFactory.m */; };
+		530C5FF51473DC7100DB8FE6 /* BaseLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 530C5FF41473DC7100DB8FE6 /* BaseLoginManager.m */; };
+		530C5FF81473DDF400DB8FE6 /* FacebookLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 530C5FF71473DDF400DB8FE6 /* FacebookLoginManager.m */; };
+		530C600114740A8B00DB8FE6 /* BarviewLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 530C5FFF14740A8A00DB8FE6 /* BarviewLoginViewController.m */; };
+		530C600214740A8B00DB8FE6 /* BarviewLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 530C600014740A8A00DB8FE6 /* BarviewLoginViewController.xib */; };
 		531898921393CD6900C7B619 /* FavoritesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 531898911393CD6900C7B619 /* FavoritesController.m */; };
 		531898991393CDBA00C7B619 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 531898981393CDBA00C7B619 /* Bar.m */; };
 		53269E0A138C262900FD03AF /* CurrentLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53269E08138C262900FD03AF /* CurrentLocation.m */; };
@@ -32,7 +37,6 @@
 		5336568D13D2896500B3E3F7 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336567D13D2896500B3E3F7 /* SBJsonBase.m */; };
 		5336568E13D2896500B3E3F7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336567F13D2896500B3E3F7 /* SBJsonParser.m */; };
 		5336568F13D2896500B3E3F7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5336568113D2896500B3E3F7 /* SBJsonWriter.m */; };
-		533B48D613DC920900ADD714 /* FacebookSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 533B48D513DC920900ADD714 /* FacebookSingleton.m */; };
 		533B48EC13DD150C00ADD714 /* DemoAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 533B48E813DD150C00ADD714 /* DemoAppViewController.m */; };
 		533B48ED13DD150C00ADD714 /* DemoAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 533B48E913DD150C00ADD714 /* DemoAppViewController.xib */; };
 		533B48EE13DD150C00ADD714 /* FBLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 533B48EB13DD150C00ADD714 /* FBLoginButton.m */; };
@@ -41,6 +45,7 @@
 		5352627C1396E56200AED924 /* BarMapLookup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5352627A1396E56200AED924 /* BarMapLookup.xib */; };
 		536EC4311394F6AF00631D6D /* BarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536EC42F1394F6AF00631D6D /* BarDetailViewController.m */; };
 		536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EC4301394F6AF00631D6D /* BarDetailViewController.xib */; };
+		5373AB231476A656007C883C /* BarviewLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB221476A656007C883C /* BarviewLoginManager.m */; };
 		539D2A9F13CE008900DD08D0 /* MapImageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */; };
 		539D2AA013CE008900DD08D0 /* MapImageDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */; };
 		53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4FCF113B42A7F00DE5B66 /* Base64.m */; };
@@ -75,6 +80,15 @@
 		32CA4F630368D1EE00C91783 /* Barview_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barview_Prefix.pch; sourceTree = "<group>"; };
 		53072E611470414000340B0C /* BVActionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVActionsController.h; sourceTree = "<group>"; };
 		53072E621470414000340B0C /* BVActionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVActionsController.m; sourceTree = "<group>"; };
+		530C5FEE1473DA5E00DB8FE6 /* LoginManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManagerFactory.h; sourceTree = "<group>"; };
+		530C5FEF1473DA5E00DB8FE6 /* LoginManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManagerFactory.m; sourceTree = "<group>"; };
+		530C5FF31473DC7100DB8FE6 /* BaseLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoginManager.h; sourceTree = "<group>"; };
+		530C5FF41473DC7100DB8FE6 /* BaseLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoginManager.m; sourceTree = "<group>"; };
+		530C5FF61473DDF400DB8FE6 /* FacebookLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginManager.h; sourceTree = "<group>"; };
+		530C5FF71473DDF400DB8FE6 /* FacebookLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginManager.m; sourceTree = "<group>"; };
+		530C5FFE14740A8900DB8FE6 /* BarviewLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarviewLoginViewController.h; sourceTree = "<group>"; };
+		530C5FFF14740A8A00DB8FE6 /* BarviewLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarviewLoginViewController.m; sourceTree = "<group>"; };
+		530C600014740A8A00DB8FE6 /* BarviewLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarviewLoginViewController.xib; sourceTree = "<group>"; };
 		531898901393CD6900C7B619 /* FavoritesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesController.h; sourceTree = "<group>"; };
 		531898911393CD6900C7B619 /* FavoritesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesController.m; sourceTree = "<group>"; };
 		531898971393CDBA00C7B619 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
@@ -86,6 +100,7 @@
 		53269E68138C675400FD03AF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53269EA4138C6D9900FD03AF /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		53269EA5138C6D9900FD03AF /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		532BC6121473D6740022021A /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
 		5336566613D2896500B3E3F7 /* facebook-ios-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "facebook-ios-sdk.xcodeproj"; sourceTree = "<group>"; };
 		5336566913D2896500B3E3F7 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		5336566A13D2896500B3E3F7 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facebook.m; sourceTree = "<group>"; };
@@ -111,8 +126,6 @@
 		5336567F13D2896500B3E3F7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		5336568013D2896500B3E3F7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		5336568113D2896500B3E3F7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		533B48D413DC920900ADD714 /* FacebookSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookSingleton.h; sourceTree = "<group>"; };
-		533B48D513DC920900ADD714 /* FacebookSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookSingleton.m; sourceTree = "<group>"; };
 		533B48E713DD150C00ADD714 /* DemoAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppViewController.h; sourceTree = "<group>"; };
 		533B48E813DD150C00ADD714 /* DemoAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppViewController.m; sourceTree = "<group>"; };
 		533B48E913DD150C00ADD714 /* DemoAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoAppViewController.xib; sourceTree = "<group>"; };
@@ -125,6 +138,8 @@
 		536EC42E1394F6AF00631D6D /* BarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDetailViewController.h; sourceTree = "<group>"; };
 		536EC42F1394F6AF00631D6D /* BarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDetailViewController.m; sourceTree = "<group>"; };
 		536EC4301394F6AF00631D6D /* BarDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarDetailViewController.xib; sourceTree = "<group>"; };
+		5373AB211476A656007C883C /* BarviewLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarviewLoginManager.h; sourceTree = "<group>"; };
+		5373AB221476A656007C883C /* BarviewLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarviewLoginManager.m; sourceTree = "<group>"; };
 		539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapImageDetailController.h; sourceTree = "<group>"; };
 		539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapImageDetailController.m; sourceTree = "<group>"; };
 		539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapImageDetailController.xib; sourceTree = "<group>"; };
@@ -202,8 +217,10 @@
 				539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */,
 				539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */,
 				539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */,
-				533B48D413DC920900ADD714 /* FacebookSingleton.h */,
-				533B48D513DC920900ADD714 /* FacebookSingleton.m */,
+				530C5FF21473DC4700DB8FE6 /* New Group */,
+				530C5FFE14740A8900DB8FE6 /* BarviewLoginViewController.h */,
+				530C5FFF14740A8A00DB8FE6 /* BarviewLoginViewController.m */,
+				530C600014740A8A00DB8FE6 /* BarviewLoginViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -220,8 +237,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				53C57E3C14736D5400BD7291 /* BarviewLogicTests */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -261,6 +278,22 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		530C5FF21473DC4700DB8FE6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				530C5FF61473DDF400DB8FE6 /* FacebookLoginManager.h */,
+				530C5FF71473DDF400DB8FE6 /* FacebookLoginManager.m */,
+				532BC6121473D6740022021A /* LoginManager.h */,
+				530C5FEE1473DA5E00DB8FE6 /* LoginManagerFactory.h */,
+				530C5FEF1473DA5E00DB8FE6 /* LoginManagerFactory.m */,
+				530C5FF31473DC7100DB8FE6 /* BaseLoginManager.h */,
+				530C5FF41473DC7100DB8FE6 /* BaseLoginManager.m */,
+				5373AB211476A656007C883C /* BarviewLoginManager.h */,
+				5373AB221476A656007C883C /* BarviewLoginManager.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		5336566513D2896500B3E3F7 /* src */ = {
@@ -424,6 +457,7 @@
 				5336568613D2896500B3E3F7 /* FBDialog.bundle in Resources */,
 				533B48ED13DD150C00ADD714 /* DemoAppViewController.xib in Resources */,
 				533B48F013DD16BB00ADD714 /* FBConnect.bundle in Resources */,
+				530C600214740A8B00DB8FE6 /* BarviewLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,10 +514,14 @@
 				5336568D13D2896500B3E3F7 /* SBJsonBase.m in Sources */,
 				5336568E13D2896500B3E3F7 /* SBJsonParser.m in Sources */,
 				5336568F13D2896500B3E3F7 /* SBJsonWriter.m in Sources */,
-				533B48D613DC920900ADD714 /* FacebookSingleton.m in Sources */,
 				533B48EC13DD150C00ADD714 /* DemoAppViewController.m in Sources */,
 				533B48EE13DD150C00ADD714 /* FBLoginButton.m in Sources */,
 				53072E631470414000340B0C /* BVActionsController.m in Sources */,
+				530C5FF01473DA5E00DB8FE6 /* LoginManagerFactory.m in Sources */,
+				530C5FF51473DC7100DB8FE6 /* BaseLoginManager.m in Sources */,
+				530C5FF81473DDF400DB8FE6 /* FacebookLoginManager.m in Sources */,
+				530C600114740A8B00DB8FE6 /* BarviewLoginViewController.m in Sources */,
+				5373AB231476A656007C883C /* BarviewLoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
