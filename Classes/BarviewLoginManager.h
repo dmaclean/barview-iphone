@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "BaseLoginManager.h"
+#import "LoginManagerFactory.h"
 
 @interface BarviewLoginManager : BaseLoginManager {
     

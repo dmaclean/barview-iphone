@@ -26,4 +26,8 @@
     return @"";
 }
 
+- (NSString*) getType {
+    return [LoginManagerFactory getFacebookType];
+}
+
 @end

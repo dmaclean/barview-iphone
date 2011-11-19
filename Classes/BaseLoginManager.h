@@ -11,7 +11,7 @@
 #import "LoginManager.h"
 
 @interface BaseLoginManager : NSObject <LoginManager> {
-    
+    NSString* type;
 }
 
 @end

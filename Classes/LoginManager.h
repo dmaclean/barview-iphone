@@ -14,4 +14,7 @@
 - (NSString*) getLogonToken;
 - (BOOL) hasBarAsFavorite:(NSString*)barId;
 - (void) clearFavorites;
+
+- (NSString*) getType;
+- (void) setType:(NSString*) type;
 @end

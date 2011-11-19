@@ -125,7 +125,16 @@
         // Construct request object
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
         
-        [request addValue:[lm getLogonToken] forHTTPHeaderField:@"user_id"];
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        NSString* userId = nil;
+        if ([lm getType] == [LoginManagerFactory getBarviewType]) {
+            userId = [defaults objectForKey:@"email"];
+        }
+        else if ([lm getType] == [LoginManagerFactory getFacebookType]) {
+            NSString* fbId = [defaults objectForKey:@"fbId"];
+            userId = [NSString stringWithFormat:@"fb%@", fbId];
+        }
+        [request addValue:userId forHTTPHeaderField:@"User_id"];
         [request setHTTPMethod:@"DELETE"];
         
         // Clear out existing connection if one exists
@@ -149,7 +158,6 @@
 		[favorites removeObjectAtIndex:[indexPath row]];
         
         // Remove the favorite from the favorites dictionary
-        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         NSMutableDictionary* faves = [defaults objectForKey:@"faves"];
         [faves removeObjectForKey:bar_id];
 		
@@ -192,20 +200,22 @@
     }
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    //NSString* fbSessionId = [defaults objectForKey:@"FBAccessTokenKey"];
-    //NSString* fbExpirationDt = [defaults objectForKey:@"FBExpirationDateKey"];
-    //NSString* fbId = [defaults objectForKey:@"fbId"];
-
     
     // Construct URL
     NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/rest/favorites"];
     
     // Construct request object
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
-    //[request addValue:@"dmac" forHTTPHeaderField:@"user_id"];
-    //[request addValue:fbSessionId forHTTPHeaderField:@"FbSessionId"];
-    //[request addValue:fbExpirationDt forHTTPHeaderField:@"FbExpirationDate"];
-    [request addValue:[lm getLogonToken] forHTTPHeaderField:@"User_id"];
+    
+    if ([lm getType] == [LoginManagerFactory getBarviewType]) {
+        [request addValue:[defaults objectForKey:@"email"] forHTTPHeaderField:@"User_id"];
+    }
+    else if ([lm getType] == [LoginManagerFactory getFacebookType]) {
+        NSString* fbId = [defaults objectForKey:@"fbId"];
+        NSString* userId = [NSString stringWithFormat:@"fb%@", fbId];
+        [request addValue:userId forHTTPHeaderField:@"User_id"];
+    }
+    
     
     
     // Clear out existing connection if one exists

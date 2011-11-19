@@ -10,6 +10,7 @@
 
 #import "FBConnect.h"
 #import "BaseLoginManager.h"
+#import "LoginManagerFactory.h"
 
 @interface FacebookLoginManager : BaseLoginManager {
 

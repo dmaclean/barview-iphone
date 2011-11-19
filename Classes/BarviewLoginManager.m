@@ -11,4 +11,24 @@
 
 @implementation BarviewLoginManager
 
+- (BOOL) userLoggedIn {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"token"] )
+        return YES;
+    
+    return NO;
+}
+
+- (NSString*) getLogonToken {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"token"] )
+        return [[[NSString alloc] initWithFormat:@"%@", [defaults objectForKey:@"token"]] autorelease];
+    
+    return @"";
+}
+
+- (NSString*) getType {
+    return [LoginManagerFactory getBarviewType];
+}
+
 @end

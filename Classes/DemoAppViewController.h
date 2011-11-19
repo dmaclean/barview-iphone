@@ -17,6 +17,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseLoginManager.h"
+#import "BarviewLoginViewController.h"
 #import "FBConnect.h"
 #import "FBLoginButton.h"
 #import "LoginManagerFactory.h"
@@ -33,6 +34,10 @@
     
     Boolean* bvLoggedIn;
     
+    BarviewLoginViewController* barviewLoginViewController;
+    
+    NSURLConnection* connectionInProgress;
+    
   Facebook* facebook;
   NSArray* _permissions;
 }
@@ -40,6 +45,8 @@
 @property(nonatomic, retain) UILabel* label;
 
 @property(nonatomic, retain) Facebook *facebook;
+
+@property(nonatomic, retain) BarviewLoginViewController* barviewLoginViewController;
 
 -(IBAction)fbButtonClick:(id)sender;
 
@@ -52,5 +59,7 @@
 -(IBAction)publishStream:(id)sender;
 
 -(IBAction)uploadPhoto:(id)sender;
+
+-(void) bvLogout;
 
 @end

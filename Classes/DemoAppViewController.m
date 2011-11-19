@@ -26,7 +26,7 @@ static NSString* kAppId = @"177771455596726";
 
 @implementation DemoAppViewController
 
-@synthesize label = _label, facebook;
+@synthesize label = _label, facebook, barviewLoginViewController;
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // UIViewController
@@ -51,6 +51,8 @@ static NSString* kAppId = @"177771455596726";
     
     // Set the Barview logged-in flag to false by default.
     bvLoggedIn = NO;
+    
+    barviewLoginViewController = [[BarviewLoginViewController alloc] initWithNibName:@"BarviewLoginViewController" bundle:nibBundleOrNil];
 
   return self;
 }
@@ -59,21 +61,40 @@ static NSString* kAppId = @"177771455596726";
  * Set initial view
  */
 - (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
-    // User hasn't logged in.  Show login button.
+    // User hasn't logged in.  Show all login buttons.
     if (![lm userLoggedIn]) {
+        // Facebook
         _fbButton.isLoggedIn = NO;
         [_fbButton updateImage];
         
+        // Barview
         barviewLogin.hidden = NO;
     }
-    // User is logged in.  Show logout button.
+    // User is logged in.  Figure out which account they're logged in with, show its logout button, and hide the rest.
     else {
-        _fbButton.isLoggedIn = YES;    
-        [_fbButton updateImage];
-        
-        barviewLogin.hidden = YES;
+        if ([lm getType] == [LoginManagerFactory getBarviewType]) {
+            barviewLogin.hidden = NO;
+            [barviewLogin setTitle:@"Logout" forState:UIControlStateNormal];
+            
+            _fbButton.isLoggedIn = NO;    
+            [_fbButton updateImage];
+            _fbButton.hidden = YES;
+        }
+        else if ([lm getType] == [LoginManagerFactory getFacebookType]) {
+            _fbButton.hidden = NO;
+            _fbButton.isLoggedIn = YES;
+            [_fbButton updateImage];
+            
+            barviewLogin.hidden = YES;
+        }
     }
 }
 
@@ -84,6 +105,12 @@ static NSString* kAppId = @"177771455596726";
   [_fbButton release];
   [facebook release];
   [_permissions release];
+    
+    if (connectionInProgress) {
+        [connectionInProgress cancel];
+        [connectionInProgress release];
+    }
+    
   [super dealloc];
 }
 
@@ -123,17 +150,50 @@ static NSString* kAppId = @"177771455596726";
   }
 }
 
+/**
+ * Actions that will be performed when the user clicks on the Barview login/logout button.
+ */
 - (IBAction) bvButtonClick:(id)sender {
     BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
     
+    // User is logged in.  Log them out.
     if([lm userLoggedIn]) {
-        NSLog(@"%@", @"User is logged in");
+        [self bvLogout];
+        
+        [barviewLogin setTitle:@"Barview Login" forState:UIControlStateNormal];
+        
         _fbButton.hidden = NO;
     }
+    // User is not logged in.  Attempt to log them in.
     else {
-        NSLog(@"%@", @"User is not logged in");
-        _fbButton.hidden = YES;
+        [[self navigationController] pushViewController:barviewLoginViewController animated:YES];
     }
+}
+
+/**
+ * Invokes an HTTP call to the server to log the user out.  A successful call will
+ * invalidate the user's token on the server side (making any further requests with
+ * it to fail), and clear out the NSUserDefault values here on the app.
+ */
+- (void) bvLogout {
+    // Construct URL
+    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/mobilelogin"];
+    
+    // Construct request object
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [request addValue:[defaults valueForKey:@"token"] forHTTPHeaderField:@"BV_TOKEN"];
+    
+    
+    // Clear out existing connection if one exists
+    if(connectionInProgress) {
+        [connectionInProgress cancel];
+        [connectionInProgress release];
+    }
+    
+    // Create and initiate the (non-blocking) connection
+    connectionInProgress = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
 }
 
 /**
@@ -244,6 +304,40 @@ static NSString* kAppId = @"177771455596726";
  */
 - (void)dialogDidComplete:(FBDialog *)dialog {
   [self.label setText:@"publish successfully"];
+}
+
+
+
+/******************************
+ * HTTP connection callbacks.
+ *****************************/
+// Print out the XML result to console to show that we've received it all.
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection {
+    // Clear out NSUserDefaults values
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"firstname"];
+    [defaults removeObjectForKey:@"lastname"];
+    [defaults removeObjectForKey:@"email"];
+    [defaults removeObjectForKey:@"dob"];
+    [defaults removeObjectForKey:@"city"];
+    [defaults removeObjectForKey:@"state"];
+    [defaults removeObjectForKey:@"token"];
+    
+    // Tell LoginManager factory that we no longer have a barview user.
+    [LoginManagerFactory setLoginManagerType:nil];
+}
+
+/**
+ * Show the user a message to let them know the logout failed.
+ */
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [connectionInProgress release];
+    connectionInProgress = nil;
+    
+    NSString* errorString = [NSString stringWithFormat:@"Unable to log out of Barview.  Please try again later. %@", [error localizedDescription]];
+    
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:errorString delegate:nil cancelButtonTitle:@"OK" destructiveButtonTitle:nil otherButtonTitles:nil];
+    [actionSheet autorelease];
 }
 
 @end

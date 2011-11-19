@@ -18,6 +18,14 @@
     return @"";
 }
 
+- (NSString*) getType {
+    return @"";
+}
+
+- (void) setType:(NSString *)type {
+    
+}
+
 - (BOOL) hasBarAsFavorite:(NSString*) barId {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSMutableDictionary* faves = [defaults objectForKey:@"faves"];

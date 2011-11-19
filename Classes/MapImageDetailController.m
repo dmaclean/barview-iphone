@@ -75,6 +75,7 @@
     barImage.image = nil;
     
     [[self navigationController] setNavigationBarHidden:NO animated:NO];
+    self.navigationItem.rightBarButtonItem = nil;
     
     // Only add the "+Faves" button if the user is logged in (otherwise we won't know the user id to
     // associate the favorited bar to) and the bar isn't already a favorite.
@@ -115,7 +116,19 @@
     // Set up request
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request addValue:[lm getLogonToken] forHTTPHeaderField:@"User_id"];
+    
+    // Add the User_id header to the request.
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* userId = nil;
+    if ([lm getType] == [LoginManagerFactory getBarviewType]) {
+        userId = [defaults objectForKey:@"email"];
+    }
+    else if ([lm getType] == [LoginManagerFactory getFacebookType]) {
+        NSString* fbId = [defaults objectForKey:@"fbId"];
+        userId = [NSString stringWithFormat:@"fb%@", fbId];
+    }
+    [request addValue:userId forHTTPHeaderField:@"User_id"];
+    
     
     // Clear out connection if one already exists
     if (connectionForFavorites) {
@@ -192,6 +205,8 @@
     }
     else {
         NSLog(@"Added to faves");
+        
+        self.navigationItem.rightBarButtonItem = nil;
     }
 }
 
