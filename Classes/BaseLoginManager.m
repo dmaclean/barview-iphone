@@ -42,4 +42,9 @@
     
     [faves removeAllObjects];
 }
+
+- (NSString*) getUserId {
+    return @"";
+}
+
 @end

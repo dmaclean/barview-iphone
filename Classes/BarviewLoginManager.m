@@ -30,5 +30,13 @@
 - (NSString*) getType {
     return [LoginManagerFactory getBarviewType];
 }
+- (NSString*) getUserId {
+    // Add the User_id header to the request.
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString* userId = [defaults objectForKey:@"email"];
+        
+    return userId;
+}
 
 @end

@@ -156,7 +156,12 @@
     [urlString release];
     
     // Set up request
-    NSURLRequest* request = [[NSURLRequest alloc] initWithURL:url];
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:url];
+    
+    BaseLoginManager* lm = [LoginManagerFactory getLoginManager];
+    if ([lm userLoggedIn]) {
+        [request addValue:[lm getUserId] forHTTPHeaderField:@"User_id"];
+    }
     
     // Clear out connection if one already exists
     if (connectionInProgress) {

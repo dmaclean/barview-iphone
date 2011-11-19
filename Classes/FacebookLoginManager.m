@@ -30,4 +30,13 @@
     return [LoginManagerFactory getFacebookType];
 }
 
+- (NSString*) getUserId {
+    // Add the User_id header to the request.
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+
+    NSString* fbId = [defaults objectForKey:@"fbId"];
+    NSString* userId = [NSString stringWithFormat:@"fb%@", fbId];
+    return userId;
+}
+
 @end
