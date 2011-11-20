@@ -17,6 +17,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseLoginManager.h"
+#import "BarviewURLUtility.h"
 #import "BarviewLoginViewController.h"
 #import "FBConnect.h"
 #import "FBLoginButton.h"

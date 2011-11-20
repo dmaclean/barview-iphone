@@ -108,7 +108,7 @@
     // Configure the correct URL for our image (we need to convert the bar id to an integer for some reason because
     // treating it like a string causes a newline to show up and fucks up the URL).
     NSMutableString* urlString = [[NSMutableString alloc] 
-                                  initWithFormat:@"http://localhost:8888/barview/index.php/rest/barimage/%d", [[bar barId] integerValue]];
+                                  initWithFormat:@"%@/%d", [BarviewURLUtility getBarImageURLForRunMode], [[bar barId] integerValue]];
 
     NSLog(@"Trying URL %@ for bar id %@", urlString, [bar barId]);
     NSURL* url = [[NSURL alloc] initWithString:urlString];

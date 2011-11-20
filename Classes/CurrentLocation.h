@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 
 #import "Bar.h"
+#import "BarviewURLUtility.h"
 #import "MapPointView.h"
 
 @interface CurrentLocation : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate, NSXMLParserDelegate> {

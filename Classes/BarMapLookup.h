@@ -11,6 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "Bar.h"
+#import "BarviewURLUtility.h"
 #import "MapImageDetailController.h"
 #import "MapPoint.h"
 #import "MapPointView.h"

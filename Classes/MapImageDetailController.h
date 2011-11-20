@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BarviewURLUtility.h"
 #import "Base64.h"
 #import "BaseLoginManager.h"
 #import "LoginManagerFactory.h"

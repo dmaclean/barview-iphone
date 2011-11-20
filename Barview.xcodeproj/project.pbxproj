@@ -46,15 +46,22 @@
 		536EC4311394F6AF00631D6D /* BarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 536EC42F1394F6AF00631D6D /* BarDetailViewController.m */; };
 		536EC4321394F6AF00631D6D /* BarDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 536EC4301394F6AF00631D6D /* BarDetailViewController.xib */; };
 		5373AB231476A656007C883C /* BarviewLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB221476A656007C883C /* BarviewLoginManager.m */; };
+		5373AB2F147844AD007C883C /* BarviewURLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB2E147844AD007C883C /* BarviewURLUtility.m */; };
+		5373AB35147852F4007C883C /* BarviewURLUtilityTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB34147852F4007C883C /* BarviewURLUtilityTest.m */; };
+		5373AB68147866AC007C883C /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5373AB67147866AC007C883C /* GHUnitIOS.framework */; };
+		5373AB7014786BBD007C883C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		5373AB7114786BBD007C883C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		5373AB7214786BBD007C883C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		5373AB7814786BBE007C883C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5373AB7614786BBE007C883C /* InfoPlist.strings */; };
+		5373AB7B14786BBE007C883C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB7A14786BBE007C883C /* main.m */; };
+		5373AB7E14786BBE007C883C /* TestingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5373AB7D14786BBE007C883C /* TestingAppDelegate.m */; };
+		5373AB8114786BBE007C883C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5373AB7F14786BBE007C883C /* MainWindow.xib */; };
 		539D2A9F13CE008900DD08D0 /* MapImageDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */; };
 		539D2AA013CE008900DD08D0 /* MapImageDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */; };
 		53A4FCF213B42A7F00DE5B66 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A4FCF113B42A7F00DE5B66 /* Base64.m */; };
 		53C57E3914736D5400BD7291 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		53C57E3A14736D5400BD7291 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		53C57E3B14736D5400BD7291 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		53C57E4114736D5400BD7291 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53C57E3F14736D5400BD7291 /* InfoPlist.strings */; };
-		53C57E4414736D5400BD7291 /* BarviewLogicTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 53C57E4314736D5400BD7291 /* BarviewLogicTests.h */; };
-		53C57E4614736D5400BD7291 /* BarviewLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C57E4514736D5400BD7291 /* BarviewLogicTests.m */; };
 		53F86EB313B59124006D196A /* MapPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53F86EB213B59124006D196A /* MapPointView.m */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +147,19 @@
 		536EC4301394F6AF00631D6D /* BarDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarDetailViewController.xib; sourceTree = "<group>"; };
 		5373AB211476A656007C883C /* BarviewLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarviewLoginManager.h; sourceTree = "<group>"; };
 		5373AB221476A656007C883C /* BarviewLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarviewLoginManager.m; sourceTree = "<group>"; };
+		5373AB2D147844AD007C883C /* BarviewURLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarviewURLUtility.h; sourceTree = "<group>"; };
+		5373AB2E147844AD007C883C /* BarviewURLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarviewURLUtility.m; sourceTree = "<group>"; };
+		5373AB33147852F4007C883C /* BarviewURLUtilityTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarviewURLUtilityTest.h; path = BarviewLogicTests/BarviewURLUtilityTest.h; sourceTree = "<group>"; };
+		5373AB34147852F4007C883C /* BarviewURLUtilityTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarviewURLUtilityTest.m; path = BarviewLogicTests/BarviewURLUtilityTest.m; sourceTree = "<group>"; };
+		5373AB67147866AC007C883C /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = "../../../../Downloads/gabriel-gh-unit-fea526d/Project-iOS/build/Framework/GHUnitIOS.framework"; sourceTree = "<group>"; };
+		5373AB6E14786BBD007C883C /* Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Testing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5373AB7514786BBE007C883C /* Testing-Info.plist */ = {isa = PBXFileReference; path = "Testing-Info.plist"; sourceTree = "<group>"; };
+		5373AB7714786BBE007C883C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5373AB7914786BBE007C883C /* Testing-Prefix.pch */ = {isa = PBXFileReference; path = "Testing-Prefix.pch"; sourceTree = "<group>"; };
+		5373AB7A14786BBE007C883C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5373AB7C14786BBE007C883C /* TestingAppDelegate.h */ = {isa = PBXFileReference; path = TestingAppDelegate.h; sourceTree = "<group>"; };
+		5373AB7D14786BBE007C883C /* TestingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingAppDelegate.m; sourceTree = "<group>"; };
+		5373AB8014786BBE007C883C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapImageDetailController.h; sourceTree = "<group>"; };
 		539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapImageDetailController.m; sourceTree = "<group>"; };
 		539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapImageDetailController.xib; sourceTree = "<group>"; };
@@ -147,11 +167,6 @@
 		53A4FCF113B42A7F00DE5B66 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		53BF132313E2365E0078F92A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		53C57E3814736D5400BD7291 /* BarviewLogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarviewLogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		53C57E3E14736D5400BD7291 /* BarviewLogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarviewLogicTests-Info.plist"; sourceTree = "<group>"; };
-		53C57E4014736D5400BD7291 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		53C57E4214736D5400BD7291 /* BarviewLogicTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarviewLogicTests-Prefix.pch"; sourceTree = "<group>"; };
-		53C57E4314736D5400BD7291 /* BarviewLogicTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarviewLogicTests.h; sourceTree = "<group>"; };
-		53C57E4514736D5400BD7291 /* BarviewLogicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarviewLogicTests.m; sourceTree = "<group>"; };
 		53F86EB113B59124006D196A /* MapPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPointView.h; sourceTree = "<group>"; };
 		53F86EB213B59124006D196A /* MapPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPointView.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Barview-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Barview-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -162,11 +177,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5373AB68147866AC007C883C /* GHUnitIOS.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				53269E67138C674B00FD03AF /* MapKit.framework in Frameworks */,
 				53269E69138C675400FD03AF /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5373AB6B14786BBD007C883C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5373AB7014786BBD007C883C /* UIKit.framework in Frameworks */,
+				5373AB7114786BBD007C883C /* Foundation.framework in Frameworks */,
+				5373AB7214786BBD007C883C /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +212,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5373AB2C147843EB007C883C /* Utilities */,
 				533B48E713DD150C00ADD714 /* DemoAppViewController.h */,
 				533B48E813DD150C00ADD714 /* DemoAppViewController.m */,
 				533B48E913DD150C00ADD714 /* DemoAppViewController.xib */,
@@ -217,7 +244,7 @@
 				539D2A9C13CE008900DD08D0 /* MapImageDetailController.h */,
 				539D2A9D13CE008900DD08D0 /* MapImageDetailController.m */,
 				539D2A9E13CE008900DD08D0 /* MapImageDetailController.xib */,
-				530C5FF21473DC4700DB8FE6 /* New Group */,
+				530C5FF21473DC4700DB8FE6 /* Login Managers */,
 				530C5FFE14740A8900DB8FE6 /* BarviewLoginViewController.h */,
 				530C5FFF14740A8A00DB8FE6 /* BarviewLoginViewController.m */,
 				530C600014740A8A00DB8FE6 /* BarviewLoginViewController.xib */,
@@ -230,6 +257,7 @@
 			children = (
 				1D6058910D05DD3D006BFB54 /* Barview.app */,
 				53C57E3814736D5400BD7291 /* BarviewLogicTests.octest */,
+				5373AB6E14786BBD007C883C /* Testing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,8 +267,9 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				5373AB69147867FB007C883C /* Tests */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				53C57E3C14736D5400BD7291 /* BarviewLogicTests */,
+				5373AB7314786BBD007C883C /* Testing */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				53269E66138C674B00FD03AF /* MapKit.framework */,
@@ -273,6 +302,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5373AB67147866AC007C883C /* GHUnitIOS.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -280,7 +310,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		530C5FF21473DC4700DB8FE6 /* New Group */ = {
+		530C5FF21473DC4700DB8FE6 /* Login Managers */ = {
 			isa = PBXGroup;
 			children = (
 				530C5FF61473DDF400DB8FE6 /* FacebookLoginManager.h */,
@@ -293,7 +323,7 @@
 				5373AB211476A656007C883C /* BarviewLoginManager.h */,
 				5373AB221476A656007C883C /* BarviewLoginManager.m */,
 			);
-			name = "New Group";
+			name = "Login Managers";
 			sourceTree = "<group>";
 		};
 		5336566513D2896500B3E3F7 /* src */ = {
@@ -344,22 +374,42 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		53C57E3C14736D5400BD7291 /* BarviewLogicTests */ = {
+		5373AB2C147843EB007C883C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				53C57E4314736D5400BD7291 /* BarviewLogicTests.h */,
-				53C57E4514736D5400BD7291 /* BarviewLogicTests.m */,
-				53C57E3D14736D5400BD7291 /* Supporting Files */,
+				5373AB2D147844AD007C883C /* BarviewURLUtility.h */,
+				5373AB2E147844AD007C883C /* BarviewURLUtility.m */,
 			);
-			path = BarviewLogicTests;
+			name = Utilities;
 			sourceTree = "<group>";
 		};
-		53C57E3D14736D5400BD7291 /* Supporting Files */ = {
+		5373AB69147867FB007C883C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				53C57E3E14736D5400BD7291 /* BarviewLogicTests-Info.plist */,
-				53C57E3F14736D5400BD7291 /* InfoPlist.strings */,
-				53C57E4214736D5400BD7291 /* BarviewLogicTests-Prefix.pch */,
+				5373AB33147852F4007C883C /* BarviewURLUtilityTest.h */,
+				5373AB34147852F4007C883C /* BarviewURLUtilityTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		5373AB7314786BBD007C883C /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				5373AB7C14786BBE007C883C /* TestingAppDelegate.h */,
+				5373AB7D14786BBE007C883C /* TestingAppDelegate.m */,
+				5373AB7F14786BBE007C883C /* MainWindow.xib */,
+				5373AB7414786BBE007C883C /* Supporting Files */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		5373AB7414786BBE007C883C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5373AB7514786BBE007C883C /* Testing-Info.plist */,
+				5373AB7614786BBE007C883C /* InfoPlist.strings */,
+				5373AB7914786BBE007C883C /* Testing-Prefix.pch */,
+				5373AB7A14786BBE007C883C /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -382,6 +432,23 @@
 			name = Barview;
 			productName = Hypnotime;
 			productReference = 1D6058910D05DD3D006BFB54 /* Barview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5373AB6D14786BBD007C883C /* Testing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5373AB8214786BBE007C883C /* Build configuration list for PBXNativeTarget "Testing" */;
+			buildPhases = (
+				5373AB6A14786BBD007C883C /* Sources */,
+				5373AB6B14786BBD007C883C /* Frameworks */,
+				5373AB6C14786BBD007C883C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Testing;
+			productName = Testing;
+			productReference = 5373AB6E14786BBD007C883C /* Testing.app */;
 			productType = "com.apple.product-type.application";
 		};
 		53C57E3714736D5400BD7291 /* BarviewLogicTests */ = {
@@ -430,6 +497,7 @@
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Barview */,
 				53C57E3714736D5400BD7291 /* BarviewLogicTests */,
+				5373AB6D14786BBD007C883C /* Testing */,
 			);
 		};
 /* End PBXProject section */
@@ -461,12 +529,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5373AB6C14786BBD007C883C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5373AB7814786BBE007C883C /* InfoPlist.strings in Resources */,
+				5373AB8114786BBE007C883C /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53C57E3514736D5400BD7291 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C57E4114736D5400BD7291 /* InfoPlist.strings in Resources */,
-				53C57E4414736D5400BD7291 /* BarviewLogicTests.h in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +597,16 @@
 				530C5FF81473DDF400DB8FE6 /* FacebookLoginManager.m in Sources */,
 				530C600114740A8B00DB8FE6 /* BarviewLoginViewController.m in Sources */,
 				5373AB231476A656007C883C /* BarviewLoginManager.m in Sources */,
+				5373AB2F147844AD007C883C /* BarviewURLUtility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5373AB6A14786BBD007C883C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5373AB7B14786BBE007C883C /* main.m in Sources */,
+				5373AB7E14786BBE007C883C /* TestingAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,19 +614,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C57E4614736D5400BD7291 /* BarviewLogicTests.m in Sources */,
+				5373AB35147852F4007C883C /* BarviewURLUtilityTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		53C57E3F14736D5400BD7291 /* InfoPlist.strings */ = {
+		5373AB7614786BBE007C883C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				53C57E4014736D5400BD7291 /* en */,
+				5373AB7714786BBE007C883C /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5373AB7F14786BBE007C883C /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5373AB8014786BBE007C883C /* en */,
+			);
+			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -552,6 +645,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads/gabriel-gh-unit-fea526d/Project-iOS/build/Framework\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -566,11 +663,54 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Downloads/gabriel-gh-unit-fea526d/Project-iOS/build/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Barview_Prefix.pch;
 				INFOPLIST_FILE = "Barview-Info.plist";
 				PRODUCT_NAME = Barview;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5373AB8314786BBE007C883C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Testing/Testing-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "Testing/Testing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5373AB8414786BBE007C883C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Testing/Testing-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "Testing/Testing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -590,7 +730,6 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "BarviewLogicTests/BarviewLogicTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
@@ -613,7 +752,6 @@
 				GCC_PREFIX_HEADER = "BarviewLogicTests/BarviewLogicTests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "BarviewLogicTests/BarviewLogicTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
@@ -661,6 +799,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5373AB8214786BBE007C883C /* Build configuration list for PBXNativeTarget "Testing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5373AB8314786BBE007C883C /* Debug */,
+				5373AB8414786BBE007C883C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		53C57E4714736D5400BD7291 /* Build configuration list for PBXNativeTarget "BarviewLogicTests" */ = {
 			isa = XCConfigurationList;

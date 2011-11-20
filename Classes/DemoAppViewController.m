@@ -177,7 +177,7 @@ static NSString* kAppId = @"177771455596726";
  */
 - (void) bvLogout {
     // Construct URL
-    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/mobilelogin"];
+    NSURL* url = [NSURL URLWithString:[BarviewURLUtility getBarviewLogoutURLForRunMode]];
     
     // Construct request object
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];

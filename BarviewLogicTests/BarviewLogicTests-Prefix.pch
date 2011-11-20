@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'BarviewLogicTests' target in the 'BarviewLogicTests' project
-//
-
-#ifdef __OBJC__
-    #import <UIKit/UIKit.h>
-#endif

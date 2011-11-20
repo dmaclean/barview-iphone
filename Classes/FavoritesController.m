@@ -119,7 +119,7 @@
         //////////////////////////////////////////////////////////////////////
         // Construct URL
         NSMutableString* urlString = [[NSMutableString alloc] 
-                                      initWithFormat:@"http://localhost:8888/barview/index.php/rest/favorite/%@", bar_id];
+                                      initWithFormat:@"%@/%@", [BarviewURLUtility getFavoriteURLForRunMode], bar_id];
         NSURL* url = [NSURL URLWithString:urlString];
         
         // Construct request object
@@ -202,7 +202,7 @@
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
     // Construct URL
-    NSURL* url = [NSURL URLWithString:@"http://localhost:8888/barview/index.php/rest/favorites"];
+    NSURL* url = [NSURL URLWithString:[BarviewURLUtility getFavoritesURLForRunMode]];
     
     // Construct request object
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30];

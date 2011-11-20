@@ -164,7 +164,7 @@
     
     bars = [[NSMutableArray alloc] init];
     
-    NSString* urlString = @"http://localhost:8888/barview/index.php/rest/nearbybars";
+    NSString* urlString = [BarviewURLUtility getNearbyBarsURLForRunMode];
     
     NSLog(@"Trying URL %@ for bars near latitude %@ and longitude %@", urlString, latitude, longitude);
     NSURL* url = [[NSURL alloc] initWithString:urlString];

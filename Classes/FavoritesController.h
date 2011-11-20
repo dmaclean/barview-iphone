@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BarDetailViewController.h"
+#import "BarviewURLUtility.h"
 #import "BaseLoginManager.h"
 #import "LoginManagerFactory.h"
 
