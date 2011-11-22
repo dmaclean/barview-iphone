@@ -20,12 +20,14 @@
     ACTION_FINDBARS = [[NSString alloc] initWithFormat:@"Find bars on map"];
     ACTION_LOGIN = [[NSString alloc] initWithFormat:@"Log in"];
     ACTION_LOGOUT = [[NSString alloc] initWithFormat:@"Log out"];
+    ACTION_DEALS = [[NSString alloc] initWithFormat:@"Deals/Events"];
     
     currentLocation = [[CurrentLocation alloc] init];
     favoritesController = [[FavoritesController alloc] init];
     loginController = [[DemoAppViewController alloc] init];
     barMapLookup = [[BarMapLookup alloc] init];
-    
+    dealsController = [[DealsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                            
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -83,6 +85,7 @@
     
     if ([lm userLoggedIn]) {
         [bvActions addObject:ACTION_FAVORITES];
+        [bvActions addObject:ACTION_DEALS];
         [bvActions addObject:ACTION_LOGOUT];
     }
     else {
@@ -201,6 +204,9 @@
     }
     else if ([selection isEqualToString:ACTION_LOGIN] || [selection isEqualToString:ACTION_LOGOUT]) {
         [[self navigationController] pushViewController:loginController animated:YES];
+    }
+    else if ([selection isEqualToString:ACTION_DEALS]) {
+        [[self navigationController] pushViewController:dealsController animated:YES];
     }
 }
 

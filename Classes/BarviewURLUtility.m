@@ -20,7 +20,7 @@ static NSString* environment = @"";
  * Set the environment flag to the env we want to send requests to.
  */
 +(void) initialize {
-    environment = PROD;
+    environment = LOCAL;
 }
 
 /**
@@ -133,6 +133,25 @@ static NSString* environment = @"";
     }
     else if (environment == PROD) {
         return @"http://bar-view.com/index.php?/mobilelogin/logout";
+    }
+    return @"";
+}
+
+/*
+ * URL to facilitate fetching deals for a user.
+ */
++ (NSString*) getDealsURLForRunMode {
+    if (environment == LOCAL) {
+        return @"http://localhost:8888/barview/index.php?/rest/events";
+    }
+    else if (environment == DEV) {
+        return @"http://dev.bar-view.com/index.php?/rest/events";
+    }
+    else if (environment == DEMO) {
+        return @"http://demo.bar-view.com/index.php?/rest/events";
+    }
+    else if (environment == PROD) {
+        return @"http://bar-view.com/index.php?/rest/events";
     }
     return @"";
 }

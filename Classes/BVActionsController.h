@@ -11,6 +11,7 @@
 #import "BarMapLookup.h"
 #import "BaseLoginManager.h"
 #import "CurrentLocation.h"
+#import "DealsViewController.h"
 #import "DemoAppViewController.h"
 #import "FavoritesController.h"
 #import "LoginManagerFactory.h"
@@ -24,11 +25,14 @@
     NSString* ACTION_FAVORITES;
     NSString* ACTION_LOGOUT;
     NSString* ACTION_LOGIN;
+    NSString* ACTION_DEALS;
     
     BarMapLookup* barMapLookup;
     CurrentLocation* currentLocation;
+    DealsViewController* dealsController;
     DemoAppViewController* loginController;
     FavoritesController* favoritesController;
+    
 }
 
 @property (retain) DemoAppViewController* loginController;

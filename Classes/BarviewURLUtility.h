@@ -19,6 +19,7 @@
 + (NSString*) getBarImageURLForRunMode;
 + (NSString*) getBarviewLoginURLForRunMode;
 + (NSString*) getBarviewLogoutURLForRunMode;
++ (NSString*) getDealsURLForRunMode;
 
 + (NSString*) getLocalString;
 + (NSString*) getDevString;
