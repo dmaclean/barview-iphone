@@ -115,6 +115,7 @@
     [defaults removeObjectForKey:@"city"];
     [defaults removeObjectForKey:@"state"];
     [defaults removeObjectForKey:@"token"];
+    [defaults removeObjectForKey:@"usertype"];
 }
 
 /**
@@ -166,7 +167,7 @@
     // and send the user back to the main login screen.
     else {
         [LoginManagerFactory setLoginManagerType:[LoginManagerFactory getBarviewType]];
-        
+        [defaults setValue:[LoginManagerFactory getBarviewType] forKey:@"usertype"];
         [[self navigationController] popViewControllerAnimated:YES];
     }
 }

@@ -21,6 +21,20 @@ static BaseLoginManager* baseLoginManager;
 
 @implementation LoginManagerFactory
 
++(void)initialize {
+    [super initialize];
+
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* t = [defaults valueForKey:@"usertype"];
+    if (!t)
+        return;
+    
+    if ([t isEqualToString:barviewType])
+        type = barviewType;
+    else if ([t isEqualToString:facebookType])
+        type = facebookType;
+}
+
 + (BaseLoginManager*) getLoginManager {
     if (type == barviewType) {
         if (!barviewLoginManager) {
@@ -29,7 +43,7 @@ static BaseLoginManager* baseLoginManager;
         
         return barviewLoginManager;
     }
-    else if (type == facebookType) {
+    else if (type == facebookType && [facebook isSessionValid]) {
         if (!facebookLoginManager) {
             facebookLoginManager = [[FacebookLoginManager alloc] init];
         }
@@ -56,9 +70,9 @@ static BaseLoginManager* baseLoginManager;
 + (void) setFacebookObject:(Facebook *)fb {
     facebook = fb;
     
-    if ([facebook isSessionValid]) {
-        type = facebookType;
-    }
+    //if ([facebook isSessionValid]) {
+    //   type = facebookType;
+    //}
 }
 
 + (void) setLoginManagerType:(NSString*) lmType {

@@ -247,6 +247,7 @@ static NSString* kAppId = @"177771455596726";
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
     [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults setObject:[LoginManagerFactory getFacebookType] forKey:@"usertype"];
     [defaults synchronize];
     
     // get information about the currently logged in user
@@ -287,6 +288,7 @@ static NSString* kAppId = @"177771455596726";
     [defaults removeObjectForKey:@"FBExpirationDateKey"];
     [defaults removeObjectForKey:@"fbId"];
     [defaults removeObjectForKey:@"fbName"];
+    [defaults removeObjectForKey:@"usertype"];
     [defaults synchronize];
     
     // Let the LoginManager factory know we've logged out of facebook.
@@ -322,6 +324,7 @@ static NSString* kAppId = @"177771455596726";
     [defaults removeObjectForKey:@"city"];
     [defaults removeObjectForKey:@"state"];
     [defaults removeObjectForKey:@"token"];
+    [defaults removeObjectForKey:@"usertype"];
     
     // Tell LoginManager factory that we no longer have a barview user.
     [LoginManagerFactory setLoginManagerType:nil];
